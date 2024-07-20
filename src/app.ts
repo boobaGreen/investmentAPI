@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
+import tokenRouter from './routes/tokenRouter';
 import investmentRouter from './routes/investmentRouter';
 import AppError from './utils/appError';
 
@@ -41,6 +42,7 @@ app.use(express.json({ limit: '10kb' })); // Body limit is 10 kb
 
 app.use(cors());
 
+app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
 
 // set route for all no match routes

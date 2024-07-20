@@ -10,6 +10,22 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatetAt DateTime @updatedAt // @updateAt forse da cambiare era valida prima su updateAt // ***********************
+  username  String   @unique
+  password  String
+}
+
+model Token {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  token     String
+  authLevel String
+  isUsed    Boolean
+}
+
 model Investment {
   id                 Int      @id @default(autoincrement())
   createdAt          DateTime @default(now())

@@ -12,8 +12,7 @@ export const getAll = catchAsync(
     // Invia la risposta
     res.status(200).json({
       status: 'success',
-      results: doc.length,
-      data: { data: doc },
+      doc,
     });
   },
 );
