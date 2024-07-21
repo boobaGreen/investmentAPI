@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import tokenRouter from './routes/tokenRouter';
 import investmentRouter from './routes/investmentRouter';
+import healthRouter from './routes/healthRouter';
 import AppError from './utils/appError';
 
 dotenv.config();
@@ -47,6 +48,7 @@ app.use(cors());
 
 app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
+app.use('/api/health', healthRouter);
 
 // set route for all no match routes
 app.all('*', (req, res, next) => {

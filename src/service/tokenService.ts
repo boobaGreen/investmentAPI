@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv';
 import { compare } from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { db } from '../utils/dbServer';
+import db from '../utils/dbServer';
 
 dotenv.config();
 

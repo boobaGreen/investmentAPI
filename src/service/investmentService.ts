@@ -1,4 +1,4 @@
-import { db } from '../utils/dbServer';
+import db from '../utils/dbServer';
 import { TInvestment } from '../types/TInvestment';
 import { groupByGranularity } from '../utils/dateUtils'; // Importa la funzione
 

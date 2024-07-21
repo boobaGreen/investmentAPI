@@ -1,20 +1,18 @@
 import { PrismaClient } from '@prisma/client';
 
-let db: PrismaClient;
+class Database {
+  private static instance: PrismaClient;
 
-declare global {
-  // eslint-disable-next-line vars-on-top, no-var
-  var __db: PrismaClient | undefined;
+  // Costruttore privato per evitare istanziazione diretta
+  // eslint-disable-next-line no-useless-constructor, no-empty-function
+  private constructor() {}
+
+  public static getInstance(): PrismaClient {
+    if (!Database.instance) {
+      Database.instance = new PrismaClient();
+    }
+    return Database.instance;
+  }
 }
 
-if (!global.__db) {
-  global.__db = new PrismaClient();
-}
-
-// eslint-disable-next-line prefer-const
-db = global.__db;
-
-// eslint-disable-next-line import/prefer-default-export
-export { db };
-
-// qui usaimo vae e non mi piace vedere se possiamo usare un altro pattern
+export default Database.getInstance();
