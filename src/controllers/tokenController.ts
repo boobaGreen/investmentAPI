@@ -33,7 +33,7 @@ export const getToken = catchAsync(async (req: Request, res: Response) => {
 
       return res.status(200).json({
         status: 'success',
-        message: 'Token has been set as a cookie',
+        message: 'Token has been set as a cookie with "readWrite" auth access',
       });
     }
     return res.status(401).json({
@@ -56,7 +56,7 @@ export const getToken = catchAsync(async (req: Request, res: Response) => {
 
     return res.status(200).json({
       status: 'success',
-      message: 'Token has been set as a cookie',
+      message: 'Token has been set as a cookie with "read" auth access',
     });
   }
 
