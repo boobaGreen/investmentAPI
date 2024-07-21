@@ -1,0 +1,98 @@
+2024-07-21 14:30:47 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:36:27 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:36:27 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:38:57 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:38:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:41:00 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 14:41:00 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 14:40:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:40:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:42:06 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 14:42:06 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 14:42:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:42:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:45:13 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 14:45:13 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 14:45:08 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:45:08 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:46:27 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:46:27 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:48:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:48:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:49:32 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:49:32 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:55:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 14:55:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:01:41 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:01:41 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:02:52 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:02:52 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:03:39 [32minfo[39m: App running on port 8000...
+2024-07-21 15:04:12 [32minfo[39m: App running on port 8000...
+2024-07-21 15:04:30 [32minfo[39m: App running on port 8000...
+2024-07-21 15:05:12 [32minfo[39m: App running on port 8000...
+2024-07-21 15:08:07 [32minfo[39m: App running on port 8000...
+2024-07-21 15:12:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:12:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:13:57 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:13:58 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:14:58 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:14:58 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:15:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:15:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:16:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:16:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:17:02 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:17:02 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:18:13 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:18:13 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:18:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 15:18:36 [32minfo[39m: DATABASE_URL:

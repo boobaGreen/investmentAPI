@@ -1,10 +1,14 @@
 import * as dotenv from 'dotenv';
-import supertest from 'supertest';
 import { execSync } from 'child_process';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import supertest from 'supertest';
 import app from '../app';
-import prisma from '../utils/dbServer'; // Usa il percorso corretto
+import prisma from '../utils/dbServer';
+import logger from '../logger';
 
 dotenv.config({ path: '.env.test' });
+
+logger.info('DATABASE_URL:', process.env.DATABASE_URL); // This should output the test database URL
 
 const request = supertest(app);
 
@@ -12,10 +16,9 @@ export default request;
 
 beforeAll(async () => {
   // Esegui le migrazioni sul database di test
-  execSync('npx prisma migrate deploy', { stdio: 'inherit' });
+  execSync('npx prisma migrate dev', { stdio: 'inherit' });
 });
 
 afterAll(async () => {
-  // Disconnetti Prisma e pulisci il database di test se necessario
   await prisma.$disconnect();
 });

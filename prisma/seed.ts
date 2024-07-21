@@ -1,6 +1,6 @@
 import { hash } from 'bcrypt';
 import logger from '../src/logger';
-import { db } from '../src/utils/dbServer';
+import db from '../src/utils/dbServer';
 import { TInvestment } from '../src/types/TInvestment';
 import { TUser } from '../src/types/TUser';
 import investments from './seedData/investmentSeedData'; // Import your investments data
@@ -13,6 +13,7 @@ function getUsers(): Array<TUser> {
     { username: 'user3', password: 'password3' },
     { username: 'user4', password: 'password4' },
     { username: 'user5', password: 'password5' },
+    { username: 'testuser', password: 'testpass' },
   ];
 }
 

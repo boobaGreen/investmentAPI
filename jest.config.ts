@@ -5,7 +5,7 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   setupFilesAfterEnv: ['<rootDir>/src/test/setupTest.ts'],
   testMatch: ['<rootDir>/src/test/**/*.test.ts'],
-  moduleDirectories: ['node_modules', 'src'], // Aggiungi questo se i moduli sono nella cartella `src`
+  moduleDirectories: ['node_modules', 'src'], // This line is fine if modules are in `src`
 };
 
 export default config;
