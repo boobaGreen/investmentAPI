@@ -20,11 +20,10 @@ npx prisma db push
 
 https://www.youtube.com/watch?v=PM58NEMJgMw
 
----da testare stats granularita e risposte , aggiunegre in risposta start ed end date , e la garnularity
+-- test stat da finire , ma ok ! poi postmani test e readme con bottone postman e disegno db
 -- mettere su env la durata del jwt in ore e il numero di tentatici (in questo caso cambiare anche codice da pensarci)
--- da aggiunegre test
 -- da insomia a postman
 -- struttura data grafico
--- sciluppo anche su render.com
+-- sviluppo anche su render.com
 -- documentazione presaentazione canvas
 -- readme
