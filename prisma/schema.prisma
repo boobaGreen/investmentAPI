@@ -21,15 +21,15 @@ model User {
 model Token {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  token     String
+  token     String   @unique
   authLevel String
   isUsed    Boolean
 }
 
 model Investment {
-  id                 Int      @id @default(autoincrement())
-  createdAt          DateTime @default(now())
-  confirmedAt        DateTime @updatedAt // @updateAt forse da cambiare era valida prima su updateAt // ***********************
+  id                 Int       @id @default(autoincrement())
+  createdAt          DateTime  @default(now())
+  confirmedAt        DateTime?
   value              Int
   annualInterestRate Float
 }

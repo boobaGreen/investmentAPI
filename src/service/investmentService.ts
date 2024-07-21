@@ -1,8 +1,8 @@
 import { db } from '../utils/dbServer';
-
 import { TInvestment } from '../types/TInvestment';
+import { groupByGranularity } from '../utils/dateUtils'; // Importa la funzione
 
-export const getAllInvestments = async (): Promise<TInvestment[]> => {
+export const getAllInvestmentsService = async (): Promise<TInvestment[]> => {
   return db.investment.findMany({
     select: {
       id: true,
@@ -14,58 +14,40 @@ export const getAllInvestments = async (): Promise<TInvestment[]> => {
   });
 };
 
-export const getInvestments = async (
-  id: number,
-): Promise<TInvestment | null> => {
-  return db.investment.findUnique({
-    where: {
-      id,
-    },
+// Funzione per creare un investimento
+export const createInvestmentService = async (investmentData: {
+  value: number;
+  annualInterestRate: number;
+}) => {
+  return db.investment.create({
+    data: investmentData,
   });
 };
 
-// export const createAuthor = async (
-//   author: Omit<Author, 'id'>,
-// ): Promise<Author> => {
-//   const { firstName, lastName } = author;
-//   return db.author.create({
-//     data: {
-//       firstName,
-//       lastName,
-//     },
-//     select: {
-//       id: true,
-//       firstName: true,
-//       lastName: true,
-//     },
-//   });
-// };
+// Funzione per ottenere le statistiche degli investimenti
+export const getInvestmentStatsService = async (
+  startDate: string,
+  endDate: string,
+  granularity: string,
+) => {
+  const investments = await db.investment.findMany({
+    where: {
+      createdAt: {
+        gte: new Date(startDate),
+        lte: new Date(endDate),
+      },
+    },
+  });
 
-// export const updateAuthor = async (
-//   author: Omit<Author, 'id'>,
-//   id: number,
-// ): Promise<Author> => {
-//   const { firstName, lastName } = author;
-//   return db.author.update({
-//     where: {
-//       id,
-//     },
-//     data: {
-//       firstName,
-//       lastName,
-//     },
-//     select: {
-//       id: true,
-//       firstName: true,
-//       lastName: true,
-//     },
-//   });
-// };
+  // Processa i dati per ottenere le statistiche richieste
+  const totalInvestments = investments.length;
+  const totalValue = investments.reduce((sum, inv) => sum + inv.value, 0);
 
-// export const deleteAuthor = async (id: number): Promise<void> => {
-//   await db.author.delete({
-//     where: {
-//       id,
-//     },
-//   });
-// };
+  const groupedData = groupByGranularity(investments, granularity);
+
+  return {
+    totalInvestments,
+    totalValue,
+    details: groupedData,
+  };
+};

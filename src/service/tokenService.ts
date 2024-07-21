@@ -43,3 +43,38 @@ export async function saveToken(
     },
   });
 }
+
+export async function verifyToken(token: string) {
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET) as {
+      username: string;
+      authLevel: string;
+    };
+
+    // Check if token exists in the database and is not used
+    const tokenRecord = await db.token.findUnique({
+      where: { token },
+    });
+
+    if (tokenRecord && !tokenRecord.isUsed) {
+      // Optionally mark token as used here
+      return decoded;
+    }
+
+    return null;
+  } catch (error) {
+    return null;
+  }
+}
+
+export async function markTokenAsUsed(token: string): Promise<void> {
+  await db.token.updateMany({
+    where: {
+      token: token,
+      isUsed: false,
+    },
+    data: {
+      isUsed: true,
+    },
+  });
+}

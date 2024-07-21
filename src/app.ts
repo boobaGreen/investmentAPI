@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
+import cookieParser from 'cookie-parser';
 import tokenRouter from './routes/tokenRouter';
 import investmentRouter from './routes/investmentRouter';
 import AppError from './utils/appError';
@@ -23,6 +24,8 @@ const limiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 Hour
   message: 'Too many request from this IP, please try again in an hour',
 });
+
+app.use(cookieParser());
 
 // Limit requests per hour from the same IP --- 429 Error code
 app.use('/api', limiter);
