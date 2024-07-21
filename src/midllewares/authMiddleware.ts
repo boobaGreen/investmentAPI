@@ -46,9 +46,9 @@ export const authRead = async (
   if (!token) {
     return next(new AppError('No token provided', 401));
   }
-
+  // non verifico bene se e' scaduto forse ******************************************
   try {
-    const tokenData = await verifyToken(token); // Funzione per verificare e decodificare il token
+    const tokenData = await verifyToken(token); // Funzione per verificare e decodificare il tokens
     if (!tokenData) {
       return next(new AppError('Invalid or expired token', 401));
     }

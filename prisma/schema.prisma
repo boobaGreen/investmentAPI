@@ -13,7 +13,7 @@ datasource db {
 model User {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
-  updatetAt DateTime @updatedAt // @updateAt forse da cambiare era valida prima su updateAt // ***********************
+  updatedAt DateTime @updatedAt // Corretto da updatetAt a updatedAt
   username  String   @unique
   password  String
 }

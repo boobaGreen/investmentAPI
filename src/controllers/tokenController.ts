@@ -44,7 +44,7 @@ export const getToken = catchAsync(async (req: Request, res: Response) => {
 
   if (!username && !password) {
     authLevel = 'read';
-    token = generateToken('userGenerico', authLevel);
+    token = generateToken('genericUser', authLevel);
     await saveToken(token, authLevel);
 
     res.cookie('authToken', token, {

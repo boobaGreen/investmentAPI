@@ -5,7 +5,8 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   setupFilesAfterEnv: ['<rootDir>/src/test/setupTest.ts'],
   testMatch: ['<rootDir>/src/test/**/*.test.ts'],
-  moduleDirectories: ['node_modules', 'src'], // This line is fine if modules are in `src`
+  moduleDirectories: ['node_modules', 'src'],
+  maxWorkers: 1, // Esegui i test uno alla volta
 };
 
 export default config;

@@ -121,3 +121,712 @@ Unique constraint failed on the fields: (`username`)
 2024-07-21 15:45:26 [32minfo[39m: DATABASE_URL:
 2024-07-21 15:45:26 [32minfo[39m: DATABASE_URL:
 2024-07-21 15:45:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:12:34 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:12:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:12:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:15:55 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:15:55 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:15:55 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:18:50 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:18:50 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:18:50 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:19:28 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:19:28 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:22:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:22:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:22:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:23:02 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:23:02 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:35:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:35:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:35:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:36:20 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:36:20 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:36:46 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:36:46 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:36:46 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:40:04 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:40:04 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:40:04 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:41:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:41:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:41:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:43:17 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:43:17 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:43:47 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:43:47 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:43:47 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:45:54 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:45:54 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:45:54 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:47:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:47:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:47:32 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:51:33 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:51:33 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:51:33 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:53:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:53:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:53:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:53:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:53:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:53:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:57:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:57:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:57:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:58:43 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:58:43 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:58:43 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:59:08 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:59:08 [32minfo[39m: DATABASE_URL:
+2024-07-21 16:59:08 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:03:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:03:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:03:15 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:05:18 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:05:18 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:05:18 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:10:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:10:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:10:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:10:52 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:10:52 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:10:52 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:11:58 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:11:57 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:11:58 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:16:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:16:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:16:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:19:25 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:19:25 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:19:25 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:20:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:20:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:20:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:20:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:20:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:20:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:23:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:23:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:23:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:26:51 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:26:51 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:26:51 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:27:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:27:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:27:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:30:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:30:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:30:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:42:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:42:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:42:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:45:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:45:27 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:45:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:46:25 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:46:24 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:46:25 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:47:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:47:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:47:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:48:17 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:48:17 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:48:17 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:48:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:48:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:48:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:49:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:49:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:49:16 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:49:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:49:39 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:49:40 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:52:54 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:52:54 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:52:54 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:53:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:53:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:53:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:54:04 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:54:05 [32minfo[39m: DATABASE_URL:
+2024-07-21 17:54:04 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:50:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:50:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:50:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:51:23 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:51:23 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:51:24 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:52:09 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:52:09 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:52:09 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:53:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:53:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:53:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:54:53 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:54:53 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:54:53 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:57:59 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:57:59 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:57:59 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:58:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:58:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:58:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:59:06 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:59:06 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:59:06 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:59:42 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:59:42 [32minfo[39m: DATABASE_URL:
+2024-07-21 18:59:42 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:00:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:00:14 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:00:15 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:01:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:01:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:01:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:02:34 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:02:34 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:02:34 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:03:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:03:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:03:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:06:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:06:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:06:30 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:10:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:10:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:10:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:11:09 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:11:10 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:11:09 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:11:50 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:11:50 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:11:50 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:12:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:12:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:12:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:13:19 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:13:19 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:13:19 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:15:24 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:15:24 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:15:24 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:16:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:16:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:16:22 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:17:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:17:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:17:01 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:17:21 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:17:20 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:17:21 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:18:10 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:18:10 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:18:10 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:18:37 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:18:37 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:18:37 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:20:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:20:57 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:20:57 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:22:59 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:23:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:23:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:23:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:23:35 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:23:36 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:24:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:24:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:24:26 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:24:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:24:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:24:49 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:00 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:31 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:26:56 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:27:12 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:27:13 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:27:13 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:27:51 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:27:51 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:27:51 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:28:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:28:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:28:29 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:29:18 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:29:18 [32minfo[39m: DATABASE_URL:
+2024-07-21 19:29:18 [32minfo[39m: DATABASE_URL:
+2024-07-21 21:23:30 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:30 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:30 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:30 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:34 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:34 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:34 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:37 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:37 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:40 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:40 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:42 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:23:42 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:38:37 [32minfo[39m: App running on port 8000...
+2024-07-21 21:50:21 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:50:22 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 21:50:22 [31merror[39m: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:31:22
+
+  28 // Seeding degli utenti
+  29 await Promise.all(
+  30   getUsers().map(async (user) => {
+→ 31     return db.user.create(
+Unique constraint failed on the fields: (`username`)
+2024-07-21 22:11:08 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:21:13 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:21:46 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:28:50 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:31:22 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:37:28 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:38:02 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:38:35 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:40:15 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:41:04 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:43:36 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:43:39 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:43:46 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:43:53 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:44:00 [32minfo[39m: Database seeding completed successfully
+2024-07-21 22:51:09 [31merror[39m: Error during seeding: 
+Invalid `db.user.deleteMany()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:29:19
+
+  26 async function seed() {
+  27   try {
+  28     // Cancella tutti i dati esistenti prima di eseguire il seeding
+→ 29     await db.user.deleteMany(
+The table `main.User` does not exist in the current database.
+2024-07-21 22:58:05 [33mwarn[39m: user table does not exist. Skipping.
+2024-07-21 22:58:05 [33mwarn[39m: investment table does not exist. Skipping.
+2024-07-21 22:58:05 [33mwarn[39m: token table does not exist. Skipping.
+2024-07-21 22:58:05 [31merror[39m: Error during seeding: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:60:24
+
+  57 // Seeding degli utenti
+  58 await Promise.all(
+  59   getUsers().map(async (user) => {
+→ 60     return db.user.create(
+The table `main.User` does not exist in the current database.
+2024-07-21 22:58:09 [33mwarn[39m: user table does not exist. Skipping.
+2024-07-21 22:58:09 [33mwarn[39m: investment table does not exist. Skipping.
+2024-07-21 22:58:09 [33mwarn[39m: token table does not exist. Skipping.
+2024-07-21 22:58:09 [31merror[39m: Error during seeding: 
+Invalid `db.user.create()` invocation in
+/media/clod/c14fdd0a-05ec-44fb-88f9-217ab8c9a98d/code/investimentiApi/prisma/seed.ts:60:24
+
+  57 // Seeding degli utenti
+  58 await Promise.all(
+  59   getUsers().map(async (user) => {
+→ 60     return db.user.create(
+The table `main.User` does not exist in the current database.
+2024-07-21 23:00:27 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:00:27 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:00:27 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:00:28 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:00:53 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:00:53 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:00:53 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:00:54 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:00:55 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:00:56 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:00:56 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:00:57 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:02 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:02 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:02 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:03 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:09 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:09 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:09 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:11 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:16 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:16 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:16 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:18 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:38 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:38 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:38 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:39 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:45 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:45 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:45 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:46 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:52 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:52 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:52 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:53 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:01:58 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:01:58 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:01:58 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:01:59 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:08:59 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:08:59 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:09:00 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:09:01 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:09:17 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:09:17 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:09:17 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:09:18 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:09:42 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:09:43 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:09:43 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:09:44 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:09:49 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:09:49 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:09:49 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:09:50 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:09:55 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:09:55 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:09:55 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:09:57 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:10:02 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:10:02 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:10:02 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:10:04 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:11:11 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:11:11 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:11:11 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:11:12 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:11:17 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:11:17 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:11:18 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:11:19 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:11:24 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:11:24 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:11:24 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:11:26 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:11:31 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:11:31 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:11:31 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:11:32 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:14:22 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:14:22 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:14:22 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:14:23 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:14:37 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:14:37 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:14:37 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:14:38 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:19:34 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:19:34 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:19:34 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:19:35 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:20:55 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:20:55 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:20:55 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:20:56 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:21:01 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:21:01 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:21:01 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:21:02 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:21:08 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:21:08 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:21:09 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:21:10 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:25:21 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:25:21 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:25:21 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:25:22 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:26:05 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:26:05 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:26:05 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:26:07 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:26:12 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:26:12 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:26:12 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:26:14 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:26:38 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:26:38 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:26:38 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:26:39 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:26:45 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:26:45 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:26:45 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:26:46 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:26:51 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:26:51 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:26:51 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:26:53 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:26:58 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:26:58 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:26:58 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:26:59 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:27:10 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:27:11 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:27:11 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:27:12 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:29:15 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:29:15 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:29:15 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:29:16 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:29:22 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:29:22 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:29:22 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:29:23 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:29:28 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:29:28 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:29:28 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:29:29 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:29:35 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:29:35 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:29:36 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:29:37 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:40:31 [32minfo[39m: App running on port 8000...
+2024-07-21 23:41:45 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:41:45 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:41:46 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:41:47 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:41:52 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:41:52 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:41:53 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:41:54 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:41:58 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:41:59 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:41:59 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:42:00 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:43:44 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:43:44 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:43:44 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:43:45 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:45:40 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:45:40 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:45:40 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:45:42 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:46:22 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:46:22 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:46:23 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:46:24 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:47:00 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:47:00 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:47:00 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:47:01 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:47:05 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:47:06 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:47:06 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:47:07 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:47:12 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:47:12 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:47:12 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:47:13 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:48:32 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:48:32 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:48:32 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:48:33 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:49:08 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:49:08 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:49:09 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:49:10 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:51:06 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:51:06 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:51:07 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:51:08 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:51:36 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:51:36 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:51:36 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:51:37 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:57:03 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:57:03 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:57:03 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:57:04 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:57:42 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:57:42 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:57:42 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:57:43 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:57:44 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:57:44 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:57:44 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:57:45 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:57:51 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:57:51 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:57:51 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:57:52 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:57:57 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:57:57 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:57:57 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:57:58 [32minfo[39m: Database seeding completed successfully
+2024-07-21 23:58:03 [32minfo[39m: Cleared investment table successfully.
+2024-07-21 23:58:03 [32minfo[39m: Cleared user table successfully.
+2024-07-21 23:58:03 [32minfo[39m: Cleared token table successfully.
+2024-07-21 23:58:04 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:00:06 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:00:06 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:00:06 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:00:07 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:00:08 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:00:09 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:00:09 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:00:10 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:00:15 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:00:15 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:00:15 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:00:16 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:00:21 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:00:22 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:00:22 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:00:23 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:00:28 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:00:29 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:00:29 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:00:30 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:06:24 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:06:27 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:06:33 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:06:40 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:06:46 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:11:11 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:11:11 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:11:11 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:11:11 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 00:11:13 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:11:19 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:11:19 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:11:19 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:11:20 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 00:11:21 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:11:26 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:11:26 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:11:26 [32minfo[39m: Cleared token table successfully.
+2024-07-22 00:11:27 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 00:11:28 [32minfo[39m: Database seeding completed successfully
+2024-07-22 00:11:32 [32minfo[39m: token table is already empty.
+2024-07-22 00:11:32 [32minfo[39m: Cleared user table successfully.
+2024-07-22 00:11:32 [32minfo[39m: Cleared investment table successfully.
+2024-07-22 00:11:33 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 00:11:34 [32minfo[39m: Database seeding completed successfully

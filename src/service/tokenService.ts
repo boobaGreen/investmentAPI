@@ -26,7 +26,7 @@ export async function verifyUserAndPass(
   }
   return false;
 }
-
+//************************metetr expires da .env */
 export function generateToken(username: string, authLevel: string): string {
   return jwt.sign({ username, authLevel }, JWT_SECRET, { expiresIn: '1h' });
 }

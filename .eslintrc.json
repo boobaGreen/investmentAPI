@@ -38,7 +38,19 @@
       }
     ],
     "import/no-unresolved": "off",
-    "import/no-mutable-exports": "off"
+    "import/no-mutable-exports": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.js",
+          "**/setupTest.ts",
+          "**/jest.config.ts",
+          "**/tsconfig.json"
+        ]
+      }
+    ]
   },
   "settings": {
     "import/resolver": {

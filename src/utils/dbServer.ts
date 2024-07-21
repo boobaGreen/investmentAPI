@@ -1,18 +1,9 @@
 import { PrismaClient } from '@prisma/client';
+import { config } from 'dotenv';
 
-class Database {
-  private static instance: PrismaClient;
+// Carica le variabili d'ambiente dal file .env
+config({ path: '.env' }); // Usa il percorso corretto se necessario
 
-  // Costruttore privato per evitare istanziazione diretta
-  // eslint-disable-next-line no-useless-constructor, no-empty-function
-  private constructor() {}
+const db = new PrismaClient();
 
-  public static getInstance(): PrismaClient {
-    if (!Database.instance) {
-      Database.instance = new PrismaClient();
-    }
-    return Database.instance;
-  }
-}
-
-export default Database.getInstance();
+export default db;

@@ -4,7 +4,7 @@ import express from 'express';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.status(200).json({ status: 'success' });
+  res.status(200).json({ status: 'success', message: 'Server is healthy' });
 });
 
 export default router;

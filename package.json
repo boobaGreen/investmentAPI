@@ -7,7 +7,9 @@
     "seed": "node --require esbuild-register prisma/seed.ts"
   },
   "scripts": {
-    "test": "DATABASE_URL=\"file:./test.db\" jest --config jest.config.ts",
+    "seed": "node --require esbuild-register prisma/seed.ts",
+    "seed-test": "ENV_FILE=.env.test node --require esbuild-register prisma/seed.ts",
+    "test": "ENV_FILE=.env.test jest --config jest.config.ts",
     "dev": "nodemon src/server.ts"
   },
   "keywords": [],
