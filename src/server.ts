@@ -12,7 +12,7 @@ process.on('uncaughtException', (err) => {
 
 dotenv.config({ path: './config.env' });
 
-const PORT: number = parseInt(process.env.PORT as string, 10);
+const PORT: number = parseInt(process.env.PORT as string, 10) || 8000;
 
 const server = app.listen(PORT, () => {
   logger.info(`App running on port ${PORT}...`);

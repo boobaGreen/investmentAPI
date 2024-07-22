@@ -1274,3 +1274,19 @@ The table `main.User` does not exist in the current database.
 2024-07-22 02:28:11 [32minfo[39m: Database seeding completed successfully
 2024-07-22 13:42:48 [32minfo[39m: App running on port 8000...
 2024-07-22 14:06:17 [32minfo[39m: App running on port 8000...
+2024-07-22 21:43:21 [32minfo[39m: App running on port 8000...
+2024-07-22 21:45:13 [32minfo[39m: user table is already empty.
+2024-07-22 21:45:13 [32minfo[39m: investment table is already empty.
+2024-07-22 21:45:13 [32minfo[39m: token table is already empty.
+2024-07-22 21:45:13 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 21:45:14 [32minfo[39m: Database seeding completed successfully
+2024-07-22 21:50:50 [32minfo[39m: user table is already empty.
+2024-07-22 21:50:50 [32minfo[39m: investment table is already empty.
+2024-07-22 21:50:50 [32minfo[39m: token table is already empty.
+2024-07-22 21:50:50 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 21:50:51 [32minfo[39m: Database seeding completed successfully
+2024-07-22 21:53:32 [32minfo[39m: user table is already empty.
+2024-07-22 21:53:32 [32minfo[39m: investment table is already empty.
+2024-07-22 21:53:32 [32minfo[39m: token table is already empty.
+2024-07-22 21:53:32 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-22 21:53:33 [32minfo[39m: Database seeding completed successfully

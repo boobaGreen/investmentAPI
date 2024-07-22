@@ -24,3 +24,18 @@ https://www.youtube.com/watch?v=PM58NEMJgMw
 -- struttura data grafico
 -- sviluppo anche su render.com
 -- readme
+-- mettere sveglia su render .com
+
+npx prisma generate
+npx prisma db push
+npx prisam db seed
+-cosi abbiamo caricato e creato dev.db
+ora passiamo a test.db
+
+npm install -g dotenv-cli // per cambiare file variabili d'ambiente
+
+dotenv -e .env.test -- npx prisma db push
+dotenv -e .env.test -- npx prisma db seed
+oppure preparo script
+npm run dbtest:push
+npm run dbtest:seed
