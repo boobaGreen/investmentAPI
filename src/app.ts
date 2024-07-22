@@ -11,48 +11,55 @@ import AppError from './utils/appError';
 
 dotenv.config();
 
+// Ensure the PORT environment variable is set; otherwise, exit the process
 if (!process.env.PORT) {
   process.exit(1);
 }
 
 const app = express();
 
-// Set security HTTP headers
+// Set security HTTP headers using Helmet
 app.use(helmet());
 
+// Rate limiter to prevent abuse by limiting requests per hour from the same IP address
 const limiter = rateLimit({
-  max: 500, // Max requests per hour
-  windowMs: 60 * 60 * 1000, // 1 Hour
-  message: 'Too many request from this IP, please try again in an hour',
+  max: 500, // Maximum number of requests per hour
+  windowMs: 60 * 60 * 1000, // Time window in milliseconds (1 hour)
+  message: 'Too many requests from this IP, please try again in an hour',
 });
 
+// Parse cookies
 app.use(cookieParser());
 
-// Limit requests per hour from the same IP --- 429 Error code
+// Apply rate limiting to all API routes
 app.use('/api', limiter);
 
-// Body parser, reading data from body into req.body
-app.use(express.json({ limit: '10kb' })); // Body limit is 10 kb
+// Body parser middleware to handle JSON data in request bodies
+app.use(express.json({ limit: '10kb' })); // Limit body size to 10 kilobytes
 
-// Data sanitization against XSS
+// Data sanitization against Cross-Site Scripting (XSS) attacks
+// Uncomment and configure the xss middleware as needed
 // app.use(xss()); // *******************************************************
 
-// Prevent parameter pollution (optional, commented out for now)
+// Prevent parameter pollution (optional)
+// Uncomment and configure the hpp middleware as needed
 // app.use(
 //   hpp({
 //     whitelist: ["createdAt", "name", "email", "surname"],
 //   })
 // );
 
+// Enable Cross-Origin Resource Sharing (CORS) to allow requests from other origins
 app.use(cors());
 
+// Register API routes
 app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
 app.use('/api/health', healthRouter);
 
-// set route for all no match routes
+// Handle all undefined routes by returning a 404 error
 app.all('*', (req, res, next) => {
-  next(new AppError(`Can't find${req.originalUrl} on this server`, 404));
+  next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
 
 export default app;

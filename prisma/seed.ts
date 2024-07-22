@@ -1,6 +1,6 @@
 import { hash } from 'bcrypt';
 import logger from '../src/logger';
-import db from '../src/utils/dbServer'; // Assicurati che dbServer.ts legga la variabile d'ambiente DATABASE_URL
+import db from '../src/utils/dbServer';
 import { TInvestment } from '../src/types/TInvestment';
 import { TUser } from '../src/types/TUser';
 import investments from './seedData/investmentSeedData';

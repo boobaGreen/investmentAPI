@@ -20,6 +20,7 @@ npx prisma db push
 
 https://www.youtube.com/watch?v=PM58NEMJgMw
 
+-- controllare in tutti i posti dove ce la scadenza del jwt di essere coerenti ed usare il .env
 -- test stat da finire , ma ok ! poi postmani test e readme con bottone postman e disegno db
 -- mettere su env la durata del jwt in ore e il numero di tentatici (in questo caso cambiare anche codice da pensarci)
 -- da insomia a postman

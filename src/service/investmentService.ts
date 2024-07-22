@@ -1,7 +1,14 @@
 import db from '../utils/dbServer';
 import { TInvestment } from '../types/TInvestment';
-import { groupByGranularity } from '../utils/dateUtils'; // Assicurati che la funzione sia importata correttamente
+import { groupByGranularity } from '../utils/dateUtils';
 
+/**
+ * Service function to retrieve all investments
+ *
+ * This function queries the database to get a list of all investments with selected fields.
+ *
+ * @returns {Promise<TInvestment[]>} A promise that resolves to an array of investments.
+ */
 export const getAllInvestmentsService = async (): Promise<TInvestment[]> => {
   return db.investment.findMany({
     select: {
@@ -14,7 +21,17 @@ export const getAllInvestmentsService = async (): Promise<TInvestment[]> => {
   });
 };
 
-// Funzione per creare un investimento
+/**
+ * Service function to create a new investment
+ *
+ * This function creates a new investment record in the database with the specified details.
+ *
+ * @param {Object} investmentData - The data for the new investment.
+ * @param {number} investmentData.value - The value of the investment.
+ * @param {number} investmentData.annualInterestRate - The annual interest rate of the investment.
+ *
+ * @returns {Promise<TInvestment>} A promise that resolves to the created investment record.
+ */
 export const createInvestmentService = async (investmentData: {
   value: number;
   annualInterestRate: number;
@@ -24,19 +41,35 @@ export const createInvestmentService = async (investmentData: {
   });
 };
 
-// Funzione per ottenere le statistiche degli investimenti
+/**
+ * Service function to get investment statistics
+ *
+ * This function retrieves investment statistics for a given date range and granularity.
+ * It defaults to a daily granularity, starting from January 1, 2000, to the current date.
+ *
+ * @param {string} [startDate='2000-01-01'] - The start date for the statistics (inclusive).
+ * @param {string} [endDate=new Date().toISOString().split('T')[0]] - The end date for the statistics (inclusive).
+ * @param {string} [granularity='day'] - The granularity for grouping the statistics (e.g., 'day', 'week', 'month', 'year').
+ *
+ * @throws {Error} Throws an error if the provided granularity is not valid.
+ *
+ * @returns {Promise<Object>} A promise that resolves to an object containing:
+ * - {number} totalInvestments - The total number of investments.
+ * - {number} totalValue - The total value of investments.
+ * - {Object} details - The investment details grouped by the specified granularity.
+ */
 export const getInvestmentStatsService = async (
-  startDate: string = '2000-01-01',
-  endDate: string = new Date().toISOString().split('T')[0], // Imposta endDate come la data odierna
-  granularity: string = 'day', // Imposta granularità di default come 'day'
+  startDate: string,
+  endDate: string,
+  granularity: string,
 ) => {
-  // Verifica se la granularità è valida
+  // Check if the provided granularity is valid
   const validGranularities = ['day', 'week', 'month', 'year'];
   if (!validGranularities.includes(granularity)) {
     throw new Error('Invalid granularity');
   }
 
-  // Recupera gli investimenti dal database
+  // Retrieve investments from the database
   const investments = await db.investment.findMany({
     where: {
       createdAt: {
@@ -46,11 +79,11 @@ export const getInvestmentStatsService = async (
     },
   });
 
-  // Processa i dati per ottenere le statistiche richieste
+  // Process the data to calculate total investments and total value
   const totalInvestments = investments.length;
   const totalValue = investments.reduce((sum, inv) => sum + inv.value, 0);
 
-  // Raggruppa i dati secondo la granularità
+  // Group the data according to the specified granularity
   const groupedData = groupByGranularity(investments, granularity);
 
   return {

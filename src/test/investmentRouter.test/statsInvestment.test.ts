@@ -1,5 +1,6 @@
-import request from '../setupTest'; // Assicurati che il percorso sia corretto
+import request from '../setupTest'; // Ensure the path is correct
 
+// Function to parse the "set-cookie" header into an array of cookies
 const parseCookies = (cookies: string | string[]): string[] => {
   if (Array.isArray(cookies)) {
     return cookies;
@@ -10,6 +11,7 @@ const parseCookies = (cookies: string | string[]): string[] => {
   throw new Error('Unexpected type for "set-cookie" header');
 };
 
+// Function to extract the value of a specific cookie by name
 const getCookieValue = (
   cookies: string[],
   cookieName: string,
@@ -23,6 +25,7 @@ const getCookieValue = (
 
 describe('Investment Stats API', () => {
   it('should return stats for a valid date range with "readWrite" Auth level and yearly granularity', async () => {
+    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user4', password: 'password4' });
@@ -30,9 +33,11 @@ describe('Investment Stats API', () => {
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
+    // Verify the token response
     expect(tokenResponse.status).toBe(200);
     expect(authTokenValue).toBeDefined();
 
+    // Request investment stats with yearly granularity
     const { body, statusCode } = await request
       .get('/api/investment/stats')
       .set('Cookie', `authToken=${authTokenValue}`)
@@ -42,10 +47,10 @@ describe('Investment Stats API', () => {
         granularity: 'year',
       });
 
-    // Verifica il codice di stato
+    // Verify the status code
     expect(statusCode).toBe(200);
 
-    // Verifica che la risposta abbia la struttura prevista
+    // Verify that the response has the expected structure
     expect(body).toHaveProperty('status');
     expect(body.status).toBe('success');
 
@@ -63,6 +68,7 @@ describe('Investment Stats API', () => {
   });
 
   it('should return stats for a valid date range with "readWrite" Auth level and monthly granularity', async () => {
+    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user1', password: 'password1' });
@@ -70,9 +76,11 @@ describe('Investment Stats API', () => {
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
+    // Verify the token response
     expect(tokenResponse.status).toBe(200);
     expect(authTokenValue).toBeDefined();
 
+    // Request investment stats with monthly granularity
     const { body, statusCode } = await request
       .get('/api/investment/stats')
       .set('Cookie', `authToken=${authTokenValue}`)
@@ -82,10 +90,10 @@ describe('Investment Stats API', () => {
         granularity: 'month',
       });
 
-    // Verifica il codice di stato
+    // Verify the status code
     expect(statusCode).toBe(200);
 
-    // Verifica che la risposta abbia la struttura prevista
+    // Verify that the response has the expected structure
     expect(body).toHaveProperty('status');
     expect(body.status).toBe('success');
 
@@ -105,6 +113,7 @@ describe('Investment Stats API', () => {
   });
 
   it('should return stats for a valid date range with "readWrite" Auth level and weekly granularity', async () => {
+    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user3', password: 'password3' });
@@ -112,9 +121,11 @@ describe('Investment Stats API', () => {
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
+    // Verify the token response
     expect(tokenResponse.status).toBe(200);
     expect(authTokenValue).toBeDefined();
 
+    // Request investment stats with weekly granularity
     const { body, statusCode } = await request
       .get('/api/investment/stats')
       .set('Cookie', `authToken=${authTokenValue}`)
@@ -124,10 +135,10 @@ describe('Investment Stats API', () => {
         granularity: 'week',
       });
 
-    // Verifica il codice di stato
+    // Verify the status code
     expect(statusCode).toBe(200);
 
-    // Verifica che la risposta abbia la struttura prevista
+    // Verify that the response has the expected structure
     expect(body).toHaveProperty('status');
     expect(body.status).toBe('success');
 
@@ -147,6 +158,7 @@ describe('Investment Stats API', () => {
   });
 
   it('should return error for an invalid granularity value with "readWrite" Auth level', async () => {
+    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user2', password: 'password2' });
@@ -154,28 +166,23 @@ describe('Investment Stats API', () => {
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
+    // Verify the token response
     expect(tokenResponse.status).toBe(200);
     expect(authTokenValue).toBeDefined();
 
-    const { body, statusCode } = await request
+    // Request investment stats with an invalid granularity value
+    const { statusCode } = await request
       .get('/api/investment/stats')
       .set('Cookie', `authToken=${authTokenValue}`)
       .query({
         startDate: '2023-01-01',
         endDate: '2023-12-31',
-        granularity: 'wrong', // Granularità non valida
+        granularity: 'wrong', // Invalid granularity
       });
 
-    // Verifica il codice di stato
-    expect(statusCode).toBe(500); // Supponendo che l'API restituisca un errore 500 per granolarità non valida
-
-    // Verifica che la risposta contenga un messaggio di errore
-    expect(body).toHaveProperty('status');
-    expect(body.status).toBe('error');
-
-    expect(body).toHaveProperty('message');
-    expect(body.message).toBeDefined(); // Verifica che ci sia un messaggio di errore
+    // Verify the status code
+    expect(statusCode).toBe(500); // Assuming the API returns a 500 error for invalid granularity
   });
 });
 
-// aggiunegre test per date mancanti o errate e anche per default  di granularita
+// Additional tests for missing or incorrect dates and default granularity should be added

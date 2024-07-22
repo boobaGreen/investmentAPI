@@ -1,37 +1,37 @@
-import dotenv from 'dotenv'; // Importa dotenv prima di altri moduli
+import dotenv from 'dotenv';
 import { execSync } from 'child_process';
 import supertest from 'supertest';
 import app from '../app';
 import prisma from '../utils/dbServer';
+import logger from '../logger';
 
-// Usa l'esportazione predefinita se il file ha una sola esportazione
-const request = supertest(app);
+dotenv.config({ path: '.env.test' });
 
-console.log('Running setupTest.ts...'); // Può essere mantenuto per il debug
+const request = supertest(app); // Create a Supertest instance for making requests
 
 beforeAll(async () => {
   process.env.DATABASE_URL = 'file:./test.db';
-  console.log('DATABASE_URL:', process.env.DATABASE_URL);
 
   try {
-    dotenv.config({ path: '.env.test' });
-
+    // Run Prisma migrationss
     execSync(
       'npx prisma migrate dev --name init --schema=prisma/schema.prisma --preview-feature',
-      { stdio: 'inherit' },
+      { stdio: 'inherit' }, // Use 'inherit' to show output in the terminal
     );
 
+    // Seed the database
     execSync('node --require esbuild-register prisma/seed.ts', {
-      stdio: 'inherit',
+      stdio: 'inherit', // Use 'inherit' to show output in the terminal
     });
   } catch (error) {
-    console.error('Error during setup:', error);
-    throw error;
+    logger.error('Error during setup:', error);
+    throw error; // Throw error to fail the test suite if setup fails
   }
 });
 
 afterAll(async () => {
+  // Disconnect Prisma client after tests to clean up resources
   await prisma.$disconnect();
 });
 
-export default request; // Usa l'esportazione predefinita
+export default request; // Export Supertest request instance for use in tests
