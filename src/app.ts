@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
+import hpp from 'hpp';
 import cookieParser from 'cookie-parser';
 import tokenRouter from './routes/tokenRouter';
 import investmentRouter from './routes/investmentRouter';
