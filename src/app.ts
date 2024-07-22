@@ -44,10 +44,10 @@ app.use(hpp());
 app.use(cors());
 
 // Register API routes
+app.use('/', healthRouter);
 app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
-app.use('/api/health', healthRouter);
-app.use('/', (req, res) => {
+app.use('/api', (req, res) => {
   res.status(200).json({
     message: 'Welcome to investAPI. Please read the documentation before use.',
   });
