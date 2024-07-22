@@ -47,7 +47,7 @@ app.use(cors());
 app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
 app.use('/api/health', healthRouter);
-app.use('/api', (req, res) => {
+app.use('/', (req, res) => {
   res.status(200).json({
     message: 'Welcome to investAPI. Please read the documentation before use.',
   });
