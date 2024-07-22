@@ -1,20 +1,6 @@
 import request from './setupTest'; // Ensure that the path to the setupTest module is correct
 
-/**
- * Utility function to extract the value of a specific cookie by name.
- * @param cookies - Array of cookie strings or a single cookie string.
- * @param cookieName - The name of the cookie to retrieve the value for.
- * @returns The value of the cookie if found; otherwise, undefined.
- */
-const getCookieValue = (
-  cookies: string[],
-  cookieName: string,
-): string | undefined => {
-  // Find the cookie that starts with the specified cookieName
-  const cookie = cookies.find((c) => c.startsWith(`${cookieName}=`));
-  // Return the value of the cookie if found
-  return cookie ? cookie.split(';')[0].split('=')[1] : undefined;
-};
+import { getCookieValue } from '../utils/cookieUtils';
 
 describe('Token Router', () => {
   it('should return a readWrite token when valid credentials are provided', async () => {

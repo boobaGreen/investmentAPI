@@ -1,43 +1,5 @@
 import request from '../setupTest';
-
-/**
- * Parses the "set-cookie" header into an array of individual cookies.
- *
- * This function handles cases where the "set-cookie" header is a string or an array.
- *
- * @param {string | string[]} cookies - The "set-cookie" header value.
- * @returns {string[]} An array of cookies.
- * @throws {Error} Throws an error if the input type is unexpected.
- */
-const parseCookies = (cookies: string | string[]): string[] => {
-  if (Array.isArray(cookies)) {
-    return cookies;
-  }
-  if (typeof cookies === 'string') {
-    return cookies.split(',').map((cookie) => cookie.trim());
-  }
-  throw new Error('Unexpected type for "set-cookie" header');
-};
-
-/**
- * Retrieves the value of a specific cookie by its name.
- *
- * Searches for a cookie by its name and extracts its value from the cookie string.
- *
- * @param {string[]} cookies - An array of cookies in string format.
- * @param {string} cookieName - The name of the cookie to retrieve.
- * @returns {string | undefined} The value of the cookie if found, otherwise undefined.
- */
-const getCookieValue = (
-  cookies: string[],
-  cookieName: string,
-): string | undefined => {
-  const cookie = cookies.find((c) => c.startsWith(`${cookieName}=`));
-  if (cookie) {
-    return cookie.split(';')[0].split('=')[1];
-  }
-  return undefined;
-};
+import { parseCookies, getCookieValue } from '../../utils/cookieUtils';
 
 // Test suite for GET /api/investment
 describe('GET All Investments', () => {
