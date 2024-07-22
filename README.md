@@ -84,6 +84,6 @@ This collection of postman points to the possible service deployed locally on po
 
 As well as being reachable via the button above, the collection is also in the /doc/test/postman_v2 folder
 
-### INSOMINA
+### INSOMNIA
 
 The collection is also available in Insomnia v4 format in the doc/test/insomia_v4 folder

@@ -41,7 +41,7 @@ export const authWrite = async (
       return next(new AppError('Unauthorized access', 403));
     }
 
-    // Mark the token as used (optional, depending on your logic)
+    // Mark the token as used  beacuse it is a single-use token
     await markTokenAsUsed(token);
 
     // Proceed to the next middleware

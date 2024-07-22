@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import tokenRouter from './routes/tokenRouter';
 import investmentRouter from './routes/investmentRouter';
 import healthRouter from './routes/healthRouter';
+import helpRouter from './routes/helpRouter';
 import AppError from './utils/appError';
 
 dotenv.config();
@@ -47,11 +48,7 @@ app.use(cors());
 app.use('/', healthRouter);
 app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
-app.use('/api', (req, res) => {
-  res.status(200).json({
-    message: 'Welcome to investAPI. Please read the documentation before use.',
-  });
-});
+app.use('/api', helpRouter);
 // Handle all undefined routes by returning a 404 error
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));

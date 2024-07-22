@@ -46,12 +46,6 @@ router.get('/', (req, res) => {
         description:
           'Endpoint to get a list of all investments. Requires a JWT token (single-use) in the cookie with "read" or "readWrite" auth level. Returns a list of investments with details including value, annual interest rate, creation date, and confirmation status.',
       },
-      {
-        method: 'GET',
-        path: '/api/investment/stats',
-        description:
-          'Endpoint to retrieve investment statistics for a specified date range and granularity. Requires a JWT token (single-use) in the cookie with "read", "readWrite", or "read" auth level. The query parameters must include "startDate" (YYYY-MM-DD), "endDate" (YYYY-MM-DD), and "granularity" (one of "day", "week", "month", "year"). If any of these parameters are missing or if the JWT token does not have sufficient permissions, the server will return an error. On successful retrieval, the server responds with a 200 status and the investment statistics. Example success response: { "status": "success", "data": { "totalInvestments": 150, "totalValue": 5000000, "details": { "day": [ ... ], "week": [ ... ], "month": [ ... ], "year": [ ... ] } } }. If the token has insufficient permissions, the response will be a 403 Forbidden with an appropriate JSON message. If any required query parameters are missing, the server will return a 400 Bad Request with a message: { "status": "fail", "message": "Missing startDate, endDate, or granularity in query parameters" }.',
-      },
     ],
   });
 });
