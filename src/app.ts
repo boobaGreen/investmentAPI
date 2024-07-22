@@ -37,19 +37,9 @@ app.use('/api', limiter);
 // Body parser middleware to handle JSON data in request bodies
 app.use(express.json({ limit: '10kb' })); // Limit body size to 10 kilobytes
 
-// Data sanitization against Cross-Site Scripting (XSS) attacks
-// Uncomment and configure the xss middleware as needed
-// app.use(xss()); // *******************************************************
+// Prevent parameter pollution
+app.use(hpp());
 
-// Prevent parameter pollution (optional)
-// Uncomment and configure the hpp middleware as needed
-// app.use(
-//   hpp({
-//     whitelist: ["createdAt", "name", "email", "surname"],
-//   })
-// );
-
-// Enable Cross-Origin Resource Sharing (CORS) to allow requests from other origins
 app.use(cors());
 
 // Register API routes

@@ -11,7 +11,7 @@
     "seed-test": "ENV_FILE=.env.test node --require esbuild-register prisma/seed.ts",
     "test": "ENV_FILE=.env.test jest --config jest.config.ts",
     "dev": "nodemon src/server.ts",
-    "build": "tsc -p .",
+    "build": "npx tsc",
     "start": "node build/server.js"
   },
   "keywords": [],
@@ -28,6 +28,7 @@
     "express-rate-limit": "^7.1.1",
     "express-validator": "^7.1.0",
     "helmet": "^7.0.0",
+    "hpp": "^0.2.3",
     "jsonwebtoken": "^9.0.2",
     "winston": "^3.13.1"
   },
