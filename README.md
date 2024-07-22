@@ -50,8 +50,6 @@ Technical specifications:
 
 ## 💽 INSTALLATION
 
-
-
 ## 🔬 TEST
 
 ### JEST E SUPERTEST
@@ -65,7 +63,7 @@ To create the test database from the terminal in the root of the project type:
 
 There are automated tests in jest and supertest .
 
-To run them:
+To run the test collection:
 
 ```
 npm run test
