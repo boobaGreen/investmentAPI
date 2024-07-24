@@ -8,13 +8,15 @@
   },
   "scripts": {
     "seed": "node --require esbuild-register prisma/seed.ts",
-    "seed-test": "ENV_FILE=.env.test node --require esbuild-register prisma/seed.ts",
-    "test": "ENV_FILE=.env.test jest --config jest.config.ts",
+    "test": "dotenv -e .env.test -- jest --config jest.config.ts",
+    "test:detect": "dotenv -e .env.test -- jest --config jest.config.ts --detectOpenHandles",
     "dev": "nodemon src/server.ts",
     "build": "npx tsc",
     "start": "node dist/server.js",
     "dbtest:push": "dotenv -e .env.test -- npx prisma db push",
-    "dbtest:seed": "dotenv -e .env.test -- npx prisma db seed"
+    "dbtest:seed": "dotenv -e .env.test -- npx prisma db seed",
+    "dbdev:push": "npx prisma db push",
+    "dbdev:seed": "npx prisma db seed"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +34,7 @@
     "helmet": "^7.0.0",
     "hpp": "^0.2.3",
     "jsonwebtoken": "^9.0.2",
+    "node-cron": "^3.0.3",
     "winston": "^3.13.1"
   },
   "devDependencies": {
@@ -45,6 +48,7 @@
     "@types/jest": "^29.5.12",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/node": "^20.14.11",
+    "@types/node-cron": "^3.0.11",
     "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",

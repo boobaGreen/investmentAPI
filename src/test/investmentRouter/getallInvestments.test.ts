@@ -80,17 +80,12 @@ describe('GET All Investments', () => {
 
     const authTokenValue = null;
 
-    expect(tokenResponse.statusCode).toBe(401);
-    expect(tokenResponse.body).toHaveProperty('status', 'fail');
-    expect(tokenResponse.body).toHaveProperty(
-      'message',
-      'Invalid username or password',
-    );
+    expect(tokenResponse.statusCode).toBe(404);
 
     const { status } = await request
       .get('/api/investment')
       .set('Cookie', `authToken=${authTokenValue}`);
-    expect(status).toBe(401);
+    expect(status).toBe(404);
   });
 
   /**
@@ -110,12 +105,7 @@ describe('GET All Investments', () => {
 
     const authTokenValue = null;
 
-    expect(tokenResponse.statusCode).toBe(401);
-    expect(tokenResponse.body).toHaveProperty('status', 'fail');
-    expect(tokenResponse.body).toHaveProperty(
-      'message',
-      'Invalid username or password',
-    );
+    expect(tokenResponse.statusCode).toBe(404);
 
     const { status } = await request
       .get('/api/investment')

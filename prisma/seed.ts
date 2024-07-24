@@ -1,5 +1,5 @@
 import { hash } from 'bcrypt';
-import logger from '../src/logger';
+import logger from '../src/utils/logger';
 import db from '../src/utils/dbServer';
 import { TInvestment } from '../src/types/TInvestment';
 import { TUser } from '../src/types/TUser';
@@ -25,12 +25,18 @@ function getUsers(): Array<TUser> {
 }
 
 function getInvestments(): Array<TInvestment> {
-  return investments;
+  return investments.map((investment) => ({
+    value: investment.value,
+    annualInterestRate: investment.annualInterestRate,
+    createdAt: new Date(investment.createdAt),
+    confirmedAt: investment.confirmedAt
+      ? new Date(investment.confirmedAt)
+      : null,
+  }));
 }
 
 async function clearTable(table: TableNames) {
   try {
-    // Check if the table has any records
     let count: number;
     switch (table) {
       case 'user':
@@ -69,7 +75,6 @@ async function clearTable(table: TableNames) {
 
 async function resetAutoIncrement() {
   try {
-    // Reset auto-increment for all relevant tables
     await db.$executeRaw`DELETE FROM sqlite_sequence WHERE name='Investment'`;
     await db.$executeRaw`DELETE FROM sqlite_sequence WHERE name='User'`;
     await db.$executeRaw`DELETE FROM sqlite_sequence WHERE name='Token'`;
@@ -82,16 +87,14 @@ async function resetAutoIncrement() {
 
 async function seed() {
   try {
-    // Clear and reset the database
     await Promise.all([
       clearTable('user'),
       clearTable('investment'),
       clearTable('token'),
     ]);
 
-    await resetAutoIncrement(); // Reset auto-increment
+    await resetAutoIncrement();
 
-    // Seed users
     await Promise.all(
       getUsers().map(async (user) => {
         return db.user.create({
@@ -103,7 +106,6 @@ async function seed() {
       }),
     );
 
-    // Seed investments
     await db.$transaction(
       getInvestments().map((investment) => {
         return db.investment.create({
@@ -111,6 +113,7 @@ async function seed() {
             value: investment.value,
             annualInterestRate: investment.annualInterestRate,
             createdAt: investment.createdAt,
+            confirmedAt: investment.confirmedAt,
           },
         });
       }),

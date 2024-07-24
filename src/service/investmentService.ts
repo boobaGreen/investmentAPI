@@ -1,4 +1,5 @@
 import db from '../utils/dbServer';
+// import AppError from '../utils/appError'; // Assicurati che il percorso sia corretto
 import { TInvestment } from '../types/TInvestment';
 import { groupByGranularity } from '../utils/dateUtils';
 
@@ -35,7 +36,7 @@ export const getAllInvestmentsService = async (): Promise<TInvestment[]> => {
 export const createInvestmentService = async (investmentData: {
   value: number;
   annualInterestRate: number;
-}) => {
+}): Promise<TInvestment> => {
   return db.investment.create({
     data: investmentData,
   });
@@ -59,10 +60,14 @@ export const createInvestmentService = async (investmentData: {
  * - {Object} details - The investment details grouped by the specified granularity.
  */
 export const getInvestmentStatsService = async (
-  startDate: string,
-  endDate: string,
-  granularity: string,
-) => {
+  startDate: string = '2000-01-01',
+  endDate: string = new Date().toISOString().split('T')[0],
+  granularity: string = 'day',
+): Promise<{
+  totalInvestments: number;
+  totalValue: number;
+  details: Record<string, unknown>; // Adjust type as needed for grouped data
+}> => {
   // Check if the provided granularity is valid
   const validGranularities = ['day', 'week', 'month', 'year'];
   if (!validGranularities.includes(granularity)) {
@@ -91,4 +96,63 @@ export const getInvestmentStatsService = async (
     totalValue,
     details: groupedData,
   };
+};
+
+/**
+ * Service function to delete an investment by ID
+ *
+ * This function deletes an investment record from the database based on the provided ID.
+ *
+ * @param {string} id - The ID of the investment to delete.
+ *
+ * @returns {Promise<void>} A promise that resolves when the investment has been deleted.
+ */
+export const deleteInvestmentService = async (id: string): Promise<void> => {
+  await db.investment.delete({
+    where: { id: Number(id) },
+  });
+};
+
+/**
+ * Service function to update an investment by ID
+ *
+ * This function updates an existing investment record in the database with the specified details.
+ *
+ * @param {string} id - The ID of the investment to update.
+ * @param {Object} updateData - The data to update the investment with.
+ * @param {number} [updateData.value] - The new value of the investment.
+ * @param {number} [updateData.annualInterestRate] - The new annual interest rate of the investment.
+ * @param {Date | null} [updateData.confirmedAt] - The new confirmation date of the investment.
+ *
+ * @returns {Promise<TInvestment>} A promise that resolves to the updated investment record.
+ */
+export const updateInvestmentService = async (
+  id: string,
+  updateData: {
+    value?: number;
+    annualInterestRate?: number;
+    confirmedAt?: Date | null;
+  },
+): Promise<TInvestment> => {
+  return db.investment.update({
+    where: { id: Number(id) },
+    data: updateData,
+  });
+};
+
+/**
+ * Service function to retrieve a single investment by ID
+ *
+ * This function fetches an investment record from the database based on the provided ID.
+ *
+ * @param {string} id - The ID of the investment to retrieve.
+ *
+ * @returns {Promise<TInvestment | null>} A promise that resolves to the investment record or null if not found.
+ */
+export const getOneInvestmentService = async (
+  id: string,
+): Promise<TInvestment | null> => {
+  return db.investment.findUnique({
+    where: { id: Number(id) },
+  });
 };

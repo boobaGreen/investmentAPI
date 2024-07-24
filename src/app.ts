@@ -1,3 +1,4 @@
+import cron from 'node-cron';
 import * as dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
@@ -10,6 +11,9 @@ import investmentRouter from './routes/investmentRouter';
 import healthRouter from './routes/healthRouter';
 import helpRouter from './routes/helpRouter';
 import AppError from './utils/appError';
+import { CRON_SCHEDULE } from './utils/jwtConfig';
+import deleteExpiredTokens from './utils/cleanupService';
+import globalErrorHandler from './controllers/errorController';
 
 dotenv.config();
 
@@ -46,12 +50,19 @@ app.use(cors());
 
 // Register API routes
 app.use('/', healthRouter);
+app.use('/api', helpRouter);
 app.use('/api/token', tokenRouter);
 app.use('/api/investment', investmentRouter);
-app.use('/api', helpRouter);
+
 // Handle all undefined routes by returning a 404 error
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server`, 404));
 });
+//Global Error Handling Middleware - 4 argument express recognize is a error middleware
+app.use(globalErrorHandler);
+// Solo se NON siamo in ambiente di test
+if (process.env.NODE_ENV !== 'test') {
+  cron.schedule(CRON_SCHEDULE, deleteExpiredTokens);
+}
 
 export default app;

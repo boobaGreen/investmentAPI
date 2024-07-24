@@ -1,37 +1,32 @@
-import dotenv from 'dotenv';
 import { execSync } from 'child_process';
 import supertest from 'supertest';
 import app from '../app';
 import prisma from '../utils/dbServer';
-import logger from '../logger';
+import logger from '../utils/logger';
 
-dotenv.config({ path: '.env.test' });
-
-const request = supertest(app); // Create a Supertest instance for making requests
+const request = supertest(app); // Crea un'istanza di Supertest per effettuare richieste
 
 beforeAll(async () => {
-  process.env.DATABASE_URL = 'file:./test.db';
-
   try {
-    // Run Prisma migrationss
+    // Esegui le migrazioni di Prisma per il database di test
     execSync(
       'npx prisma migrate dev --name init --schema=prisma/schema.prisma --preview-feature',
-      { stdio: 'inherit' }, // Use 'inherit' to show output in the terminal
+      { stdio: 'inherit' }, // Usa 'inherit' per mostrare l'output nel terminale
     );
 
-    // Seed the database
+    // Popola il database con dati di esempio
     execSync('node --require esbuild-register prisma/seed.ts', {
-      stdio: 'inherit', // Use 'inherit' to show output in the terminal
+      stdio: 'inherit', // Usa 'inherit' per mostrare l'output nel terminale
     });
   } catch (error) {
     logger.error('Error during setup:', error);
-    throw error; // Throw error to fail the test suite if setup fails
+    throw error; // Lancia un errore per far fallire la suite di test se la configurazione fallisce
   }
 });
 
 afterAll(async () => {
-  // Disconnect Prisma client after tests to clean up resources
-  await prisma.$disconnect();
+  // Disconnetti Prisma dopo i test per liberare le risorse
+  await prisma.$disconnect(); // Assicurati che Prisma si disconnetta correttamente
 });
 
-export default request; // Export Supertest request instance for use in tests
+export default request; // Esporta l'istanza di Supertest per l'uso nei test

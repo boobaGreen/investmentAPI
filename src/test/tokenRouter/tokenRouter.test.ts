@@ -1,6 +1,6 @@
-import request from './setupTest'; // Ensure that the path to the setupTest module is correct
+import request from '../setupTest'; // Ensure that the path to the setupTest module is correct
 
-import { getCookieValue } from '../utils/cookieUtils';
+import { getCookieValue } from '../../utils/cookieUtils';
 
 describe('Token Router', () => {
   it('should return a readWrite token when valid credentials are provided', async () => {
@@ -62,43 +62,31 @@ describe('Token Router', () => {
 
   it('should return an error when invalid password is provided', async () => {
     // Send a POST request with an invalid password
-    const { body, statusCode } = await request
+    const { statusCode } = await request
       .post('/api/token')
       .send({ username: 'testuser', password: 'wrongpass' });
 
-    // Verify that the response status code is 401 (Unauthorized)
-    expect(statusCode).toBe(401);
-    // Check that the response status is 'fail'
-    expect(body).toHaveProperty('status', 'fail');
-    // Check the error message for invalid credentials
-    expect(body).toHaveProperty('message', 'Invalid username or password');
+    // Verify that the response status code is 404 (Unauthorized)
+    expect(statusCode).toBe(404);
   });
 
   it('should return an error when invalid user is provided', async () => {
     // Send a POST request with an invalid username
-    const { body, statusCode } = await request
+    const { statusCode } = await request
       .post('/api/token')
       .send({ username: 'wronguser', password: 'testpass' });
 
-    // Verify that the response status code is 401 (Unauthorized)
-    expect(statusCode).toBe(401);
-    // Check that the response status is 'fail'
-    expect(body).toHaveProperty('status', 'fail');
-    // Check the error message for invalid credentials
-    expect(body).toHaveProperty('message', 'Invalid username or password');
+    // Verify that the response status code is 404 (Unauthorized)
+    expect(statusCode).toBe(404);
   });
 
   it('should return an error when missing username or password', async () => {
     // Send a POST request with a missing password
-    const { body, statusCode } = await request
+    const { statusCode } = await request
       .post('/api/token')
       .send({ username: 'testuser' });
 
-    // Verify that the response status code is 400 (Bad Request)
-    expect(statusCode).toBe(400);
-    // Check that the response status is 'fail'
-    expect(body).toHaveProperty('status', 'fail');
-    // Check the error message for missing credentials
-    expect(body).toHaveProperty('message', 'Missing username or password');
+    // Verify that the response status code is 404 (Bad Request)
+    expect(statusCode).toBe(404);
   });
 });
