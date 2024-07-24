@@ -4,7 +4,7 @@ const config: Config.InitialOptions = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   setupFilesAfterEnv: ['<rootDir>/src/test/setupTest.ts'],
-  testMatch: ['<rootDir>/src/test/**/*stat*.test.ts'],
+  testMatch: ['<rootDir>/src/test/**/*.test.ts'],
   moduleDirectories: ['node_modules', 'src'],
   maxWorkers: 1, // Esegui i test uno alla volta
 };
