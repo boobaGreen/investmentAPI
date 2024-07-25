@@ -346,6 +346,15 @@ For a visual representation of the authentication flow, refer to the diagram bel
 
 ![Authentication Flow](./doc/authflow/auth-flowcahrt.png)
 
+### 🗑️ Token Cleanup
+
+To manage expired JWTs efficiently, a cleanup function utilizing cron jobs is implemented. This function periodically executes to:
+
+- **Check Expiration**: Verify which JWTs recorded in the `Token` table have expired based on their expiration time.
+- **Remove Invalid Tokens**: Delete tokens that are no longer valid due to expiration, enhancing scalability and maintaining a clean dataset.
+
+Initially, the cron job was set to run hourly. However, for optimization, it has been configured to execute based on the `JWT_HOUR_EXPIRATION` environment variable, aligning the cleanup frequency with the JWT expiration settings.
+
 ## 🔥 API
 
 ### Health Check
