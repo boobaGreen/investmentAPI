@@ -296,11 +296,55 @@ npm start
 
 ## 📉 DataBase Design
 
+The project includes three tables in the database: User, Token, and Investment. The details of these tables are illustrated in the image below.
+
+![Database Design](./doc/database/databaseInvestmentOnlyImg.png)
+
 ---
 
 ## 🔐 Authentication Flow
 
----
+The application supports two levels of authorization:
+
+1. **JWT Token Generation**
+
+   - **Endpoint**: POST `/api/token`
+   - **Credentials**: Basic authentication (username and password)
+   - **Response**:
+     - A JWT with an expiration time
+       - Configurable via the environment variable `JWT_HOUR_EXPIRATION`
+       - Expiration time in hours (minimum 1 hour, maximum 24 hours, only integer values are allowed)
+       - Defaults to 1 hour for invalid formats and 24 hours if the value exceeds the maximum limit
+
+2. **Token Types**
+
+   - **Read-Write Token**
+     - Obtained with correct credentials (username and password)
+   - **Read-Only Token**
+     - Issued when the POST request body is empty
+
+3. **Error Handling**
+
+   - **Incorrect or Partial Credentials**: An error is returned
+
+4. **Token Requirements**
+
+   - Tokens must be unique and valid for a single use
+   - Ensured by:
+     - Generating the JWT with a secret key
+     - Including a unique username and creation date in the payload
+
+5. **Single-Use Token Enforcement**
+   - Upon token issuance:
+     - The token is sent back as a JWT cookie
+     - Recorded in a database with a `used` field set to `false`
+   - Upon token usage:
+     - The `used` field is flagged as `true`
+     - Subsequent requests with the same JWT will result in an error
+
+For a visual representation of the authentication flow, refer to the diagram below:
+
+![Authentication Flow](./doc/authflow/auth-flowcahrt.png)
 
 ## 🔥 API
 
@@ -633,7 +677,6 @@ If you prefer to use Insomnia, you can import the Postman files either locally o
 ## 🛠 Project Roadmap
 
 - [ ] `► Add the "OnlyConfimed" field to all the GET investment or STAT request method to filter OUT the NOT confirmed investments `
-- [ ] `► INSERT-TASK-2`
 
 ---
 
