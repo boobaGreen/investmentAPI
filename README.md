@@ -615,6 +615,8 @@ Between the local and the online-ready versions, you could also use a URL tied t
 
 ### Insomnia
 
+If you prefer to use Insomnia, you can import the Postman files either locally or online, as they are compatible.
+
 ---
 
 ## 🛠 Project Roadmap
