@@ -296,31 +296,128 @@ npm start
 
 ### Get Authorization Token
 
-- **Method:** GET
-- **Path:** `/api/authorization/`
-- **Description:** Returns a JWT token. If the request is sent without authentication, it returns a token with read-only rights. If the request is made with basic authentication, it returns a token with read and write rights.
+- **Method:** POST
+- **Path:** `/api/token/`
+- **Description:** Generates a JWT token. If a request with correct Basic Auth credentials (username and password) is provided, a single-use JWT token with read and write permissions is issued. The token's maximum validity is determined by the `JWT_HOUR_EXPIRATION` environment variable set in the `.env` file. If the request contains incorrect or missing fields, a generic 400 error is returned. If no credentials are provided in the request payload, a single-use JWT token with read-only permissions and a specific expiration time will be issued.
 - **Authentication:**
-  - None: Results in read-only token
-  - Basic Auth: Results in read-write token
-- **Response:** JWT token
+  - **Basic Auth**: Requires username and password for a read-write token.
+  - **No Auth**: Issues a read-only token if no credentials are provided.
+- **Response:**
+  - **Successful**: A JWT Cookie token is returned with appropriate permissions.
+  - **Error**: A generic 400 error is returned for invalid or missing credentials or fields.
+- **Notes:**
+  - A detailed flowchart of the authentication logic can be found in the `/doc/authflow/auth-flowchart.pdf` file.
 
 ### Get All Investments
 
 - **Method:** GET
 - **Path:** `/api/investments/`
-- **Description:** Returns a list of all investments.
-- **Authentication:** Required (Read Only JWT token)
-- **Response:** Array list of investment objects
+- **Description:** Retrieves a list of all investment records in the system.
+- **Authentication:** Required (Valid JWT with `read` or `readWrite` permissions)
+- **Response:**
+  - **Status:** 200 OK
+  - **Body:**
+    ```json
+    {
+      "status": "success",
+      "doc": [
+        {
+          "id": <investment_id>,
+          "value": <investment_value>,
+          "annualInterestRate": <interest_rate>,
+          "createdAt": "<creation_date>",
+          "confirmedAt": "<confirmation_date_or_null>"
+        },
+        ...
+      ]
+    }
+    ```
+  - **Fields:**
+    - `status`: Indicates the success status of the request.
+    - `doc`: An array of investment objects. Each object contains:
+      - `id`: Unique identifier for the investment.
+      - `value`: The value of the investment.
+      - `annualInterestRate`: The annual interest rate of the investment.
+      - `createdAt`: The date and time when the investment was created.
+      - `confirmedAt`: The date and time when the investment was confirmed (or `null` if not confirmed).
 
 ### Get Investment by ID
 
 - **Method:** GET
 - **Path:** `/api/investments/:id`
-- **Description:** Returns a specific investment given its ID.
+- **Description:** Retrieves a specific investment record based on the provided investment ID.
 - **Parameters:**
-  - `id` (path parameter): The ID of the investment
-- **Authentication:** Required (Read Only JWT token)
-- **Response:** Single investment object
+  - `id` (path parameter): The unique identifier of the investment to retrieve.
+- **Authentication:** Required (Valid JWT with `read` or `readWrite` permissions)
+- **Response:**
+  - **Status:** 200 OK
+  - **Body:**
+    ```json
+    {
+      "status": "success",
+      "data": {
+        "id": <investment_id>,
+        "createdAt": "<creation_date>",
+        "confirmedAt": "<confirmation_date_or_null>",
+        "value": <investment_value>,
+        "annualInterestRate": <interest_rate>
+      }
+    }
+    ```
+  - **Fields:**
+    - `status`: Indicates the success status of the request.
+    - `data`: Contains the details of the requested investment:
+      - `id`: The unique identifier for the investment.
+      - `createdAt`: The date and time when the investment was created.
+      - `confirmedAt`: The date and time when the investment was confirmed (or `null` if not confirmed).
+      - `value`: The value of the investment.
+      - `annualInterestRate`: The annual interest rate of the investment.
+
+#### Create New Investment
+
+- **Method:** POST
+- **Path:** `/api/investments/`
+- **Description:** Creates a new investment record with the specified details.
+- **Authentication:** Required (Valid JWT token with `write` permissions)
+- **Request Body:**
+  - `value` (required): The value of the investment. Should be a decimal number representing the investment amount.
+  - `annualRate` (required): The annual interest rate of the investment. Should be a decimal number.
+  - `createdAt` (optional): The date and time when the investment was created, in ISO date format (e.g., `2024-07-25T11:30:07.454Z`). If not provided, the current date and time will be used.
+  - `confirmDate` (optional): The date and time when the investment was confirmed, in ISO date format (e.g., `2024-07-25T11:30:07.454Z`). This date must be later than or equal to `createdAt`. If not provided, the field will be set to `null`.
+- **Response:**
+  - **Status:** 201 Created
+  - **Body:**
+    ```json
+    {
+      "status": "success",
+      "data": {
+        "id": <investment_id>,
+        "createdAt": "<creation_date>",
+        "confirmedAt": "<confirmation_date_or_null>",
+        "value": <investment_value>,
+        "annualInterestRate": <annual_rate>
+      }
+    }
+    ```
+  - **Fields:**
+    - `status`: Indicates the success status of the request.
+    - `data`: Contains the details of the newly created investment:
+      - `id`: The unique identifier for the new investment.
+      - `createdAt`: The date and time when the investment was created.
+      - `confirmedAt`: The date and time when the investment was confirmed, or `null` if it has not been confirmed yet.
+      - `value`: The value of the investment.
+      - `annualInterestRate`: The annual interest rate of the investment.
+
+### Update Investment Confirmation Date
+
+- **Method:** PATCH
+- **Path:** `/api/investments/`
+- **Description:** Updates the confirmation date of an existing investment.
+- **Authentication:** Required (JWT token with write permissions)
+- **Request Body:**
+  - `id` (required): The UUID of the existing investment to update
+  - `confirmDate` (required): The new confirmation date (ISO date format). Must not be earlier than the investment's creation date.
+- **Response:** Updated investment object
 
 ### Get Investment Statistics
 
@@ -334,30 +431,6 @@ npm start
   - `includeUnconfirmed` (required): Whether to include unconfirmed investments (boolean)
 - **Authentication:** Required (Read Only JWT token)
 - **Response:** Statistics object with counts and sums grouped by the specified period
-
-### Create New Investment
-
-- **Method:** POST
-- **Path:** `/api/investments/`
-- **Description:** Inserts a new investment.
-- **Authentication:** Required (JWT token with write permissions)
-- **Request Body:**
-  - `value` (required): The value of the investment (decimal)
-  - `annualRate` (required): The annual rate of the investment (decimal)
-  - `createdAt` (optional): The creation date of the investment (ISO date format). If not provided, the current date will be used.
-  - `confirmDate` (optional): The confirmation date of the investment (ISO date format). Must not be earlier than `createdAt`.
-- **Response:** Newly created investment object
-
-### Update Investment Confirmation Date
-
-- **Method:** PATCH
-- **Path:** `/api/investments/`
-- **Description:** Updates the confirmation date of an existing investment.
-- **Authentication:** Required (JWT token with write permissions)
-- **Request Body:**
-  - `id` (required): The UUID of the existing investment to update
-  - `confirmDate` (required): The new confirmation date (ISO date format). Must not be earlier than the investment's creation date.
-- **Response:** Updated investment object
 
 ---
 
