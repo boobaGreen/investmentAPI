@@ -663,8 +663,15 @@ Once your PR is reviewed and approved, it will be merged into the main branch.
 
 ---
 
-## 📄 License
+## 📃 License
 
-This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+[MIT](https://choosealicense.com/licenses/mit/)
+
+---
+
+## 📧 Contact Me
+
+Any questions? Send me an e-mail here: [claudiodallaradev@gmail.com](claudiodallaradev@gmail.com)  
+You can find my Linkedin profile here: [https://www.linkedin.com/in/claudio-dall-ara-730aa0302/](https://www.linkedin.com/in/claudio-dall-ara-730aa0302/)
 
 ---

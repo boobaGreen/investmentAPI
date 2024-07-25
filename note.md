@@ -1,7 +1,3 @@
--- fare in modo che render.com no venga giu con ping
--- postman
--- insomnia
 -- grafico db?
 -- spiegazione flusso bruciare token
--- doc section in readme
--- try live on production!
+-- auth grafico metto in readme?
