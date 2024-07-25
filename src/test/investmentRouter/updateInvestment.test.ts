@@ -205,7 +205,7 @@ describe('PATCH update an investment', () => {
   it('should return a 400 error for missing required fields', async () => {
     const tokenResponse = await request
       .post('/api/token')
-      .send({ username: 'user4', password: 'password4' });
+      .send({ username: 'user6', password: 'password6' });
 
     // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
