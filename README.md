@@ -282,11 +282,27 @@ npm start
 
 ### 🧪 Tests
 
-To execute tests, run:
+#### Jest e SuperTest:
+
+The project includes a comprehensive suite of automated tests utilizing Jest and Supertest. These tests cover various aspects of the application, including end-to-end (E2E) scenarios and critical sections of the codebase.
+
+- **Unit Tests**: Ensures individual components and functions work as expected.
+- **Integration Tests**: Verifies that different parts of the application work together correctly.
+- **End-to-End (E2E) Tests**: Simulates real user scenarios to test the application in a production-like environment.
+
+All major functionalities and code paths have been covered by these tests. However, additional tests can be added to cover more specific cases or edge scenarios as needed.
+
+To run the tests, use the following commands:
+
+- `npm test` - for running all the unit and integration tests.
 
 ```sh
 npm run test
 ```
+
+#### Postman
+
+#### Insomnia
 
 ---
 
