@@ -38,7 +38,7 @@
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running investmentAPI](#-running-investmentAPI)
-> - [🔥 API](#-features)
+> - [🔥 API](#-api)
 > - [🧪 Tests](#-tests)
 > - [🛠 Project Roadmap](#-project-roadmap)
 > - [🤝 Contributing](#-contributing)
