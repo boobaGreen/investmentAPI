@@ -43,7 +43,6 @@
 > - [🛠 Project Roadmap](#-project-roadmap)
 > - [🤝 Contributing](#-contributing)
 > - [📄 License](#-license)
-> - [👏 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -294,6 +293,91 @@ npm start
 
 ## 🔥 API
 
+### Health Check
+
+- **Method:** GET
+- **Path:** `/`
+- **Description:** Provides a basic health check to confirm that the server is operational. This endpoint returns a JSON object indicating the server's status and ensures that the server is up and running correctly.
+- **Authentication:** Not required
+- **Response:**
+  - **Status:** 200 OK
+  - **Body:**
+    ```json
+    {
+      "status": "success",
+      "message": "Server is healthy"
+    }
+    ```
+  - **Fields:**
+    - `status`: Indicates the success status of the health check.
+    - `message`: A message confirming that the server is operational.
+- **Notes:**
+  - This endpoint is useful for monitoring and checking the server's availability.
+  - It does not require any request parameters or authentication.
+
+### API Documentation
+
+- **Method:** GET
+- **Path:** `/api`
+- **Description:** Provides a comprehensive list of all available API endpoints and their descriptions. This endpoint serves as a reference for developers to understand how to interact with the API.
+- **Authentication:** Not required
+- **Response:**
+  - **Status:** 200 OK
+  - **Body:**
+    ```json
+    {
+      "status": "success",
+      "message": "List of all available API endpoints",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/api",
+          "description": "Provides a list of all available API endpoints and their descriptions."
+        },
+        {
+          "method": "GET",
+          "path": "/api/health",
+          "description": "Health check endpoint to verify that the server is operational."
+        },
+        {
+          "method": "POST",
+          "path": "/api/token",
+          "description": "Generates a JWT token. Requires a POST request with \"username\" and \"password\". On success, returns an HTTP-only JWT cookie with \"readWrite\" permissions. If the credentials are incorrect or missing, a generic 400 error is returned. If the payload is empty, a single-use JWT token with \"read\" permissions is issued."
+        },
+        {
+          "method": "POST",
+          "path": "/api/investment",
+          "description": "Creates a new investment record. Requires a single-use JWT token with \"readWrite\" permissions in the cookie. The request body must include \"value\" (integer) and \"annualInterestRate\" (float). If required fields are missing or the JWT token lacks appropriate permissions, a generic 400 error will be returned. On successful creation, a 201 status is returned along with the newly created investment object. If the token has only \"read\" permissions, a 400 error is returned, and if required fields are missing from the request body, a 400 error is also returned."
+        },
+        {
+          "method": "GET",
+          "path": "/api/investment",
+          "description": "Retrieves a list of all investments. Requires a JWT token (single-use) in the cookie with \"read\" or \"readWrite\" permissions. Returns a detailed list of investments including value, annual interest rate, creation date, and confirmation status."
+        },
+        {
+          "method": "GET",
+          "path": "/api/investment/stats",
+          "description": "Fetches investment statistics based on a specified date range and granularity. Requires a JWT token (single-use) in the cookie with \"read\", \"readWrite\", or \"read\" permissions. Query parameters must include \"startDate\" (YYYY-MM-DD), \"endDate\" (YYYY-MM-DD), and \"granularity\" (one of \"day\", \"week\", \"month\", \"year\"). If any required parameter is missing or if the token does not have sufficient permissions, a generic 400 error is returned. On successful retrieval, a 200 status code is returned with the investment statistics."
+        },
+        {
+          "method": "PATCH",
+          "path": "/api/investment",
+          "description": "Updates an existing investment record. Requires a single-use JWT token with \"readWrite\" permissions in the cookie. The request body can include the following fields: \"value\" (integer), \"annualInterestRate\" (float), and \"confirmedAt\" (ISO 8601 date format). The \"confirmedAt\" date must be greater than the creation date of the investment. If any field is invalid or missing, or if the JWT token lacks appropriate permissions, a generic 400 error is returned. On successful update, a 200 status code is returned with the updated investment object."
+        }
+      ]
+    }
+    ```
+  - **Fields:**
+    - `status`: Indicates the success status of the request.
+    - `message`: A message providing context about the response.
+    - `endpoints`: An array of objects, each describing an available API endpoint, including:
+      - `method`: HTTP method used for the endpoint.
+      - `path`: The endpoint path.
+      - `description`: A brief description of the endpoint's purpose and requirements.
+- **Notes:**
+  - This endpoint serves as a reference guide for all available API routes and their functionalities.
+  - It does not require authentication and provides a helpful overview of the API structure.
+
 ### Get Authorization Token
 
 - **Method:** POST
@@ -378,7 +462,7 @@ npm start
 - **Method:** POST
 - **Path:** `/api/investments/`
 - **Description:** Creates a new investment record with the specified details.
-- **Authentication:** Required (Valid JWT token with `write` permissions)
+- **Authentication:** Required (Valid JWT token with `readWrite` permissions)
 - **Request Body:**
   - `value` (required): The value of the investment. Should be a decimal number representing the investment amount.
   - `annualRate` (required): The annual interest rate of the investment. Should be a decimal number.
@@ -408,29 +492,82 @@ npm start
       - `value`: The value of the investment.
       - `annualInterestRate`: The annual interest rate of the investment.
 
-### Update Investment Confirmation Date
+### Update Investment
 
 - **Method:** PATCH
-- **Path:** `/api/investments/`
+- **Path:** `/api/investments/:id`
 - **Description:** Updates the confirmation date of an existing investment.
-- **Authentication:** Required (JWT token with write permissions)
+- **Authentication:** Required (Valid JWT token with `readWrite` permissions)
 - **Request Body:**
-  - `id` (required): The UUID of the existing investment to update
-  - `confirmDate` (required): The new confirmation date (ISO date format). Must not be earlier than the investment's creation date.
-- **Response:** Updated investment object
+
+  - `value` (optional): The new vaaìlue of investment . Must be an integer.
+  - `annualInterestRate` (optional): The new value of annualInterestRate. Must be a float.
+  - `confirmDate` (optional): The new confirmation date in ISO date format (e.g., `2024-01-01T00:00:00.000Z`).
+    Partial date formats are also accepted, such as 2024-07-05. These will be completed by adding zeroes to the missing parts and converted to a compatible format.
+    This date must not be earlier than the investment's creation date (`createdAt`).
+
+- **Response:**
+  - **Status:** 200 OK
+  - **Body:**
+    ```json
+    {
+      "status": "success",
+      "data": {
+        "id": <investment_id>,
+        "createdAt": "<creation_date>",
+        "confirmedAt": "<new_confirmation_date>",
+        "value": <investment_value>,
+        "annualInterestRate": <annual_rate>
+      }
+    }
+    ```
+  - **Fields:**
+    - `status`: Indicates the success status of the request.
+    - `data`: Contains the details of the updated investment:
+      - `id`: The unique identifier of the investment.
+      - `createdAt`: The original creation date of the investment.
+      - `confirmedAt`: The updated confirmation date of the investment.
+      - `value`: The value of the investment.
+      - `annualInterestRate`: The annual interest rate of the investment.
 
 ### Get Investment Statistics
 
 - **Method:** GET
 - **Path:** `/api/investments/stats`
-- **Description:** Returns count and sum of investments in a given time range, grouped by day, week, month, or year.
+- **Description:** Retrieves investment statistics for a specified time range and granularity. The data includes total investments and their aggregate value, broken down by the specified grouping period (day, week, month, or year).
 - **Query Parameters:**
-  - `startDate` (required): Start date of the range (ISO date format)
-  - `endDate` (required): End date of the range (ISO date format)
-  - `groupBy` (required): Grouping period (accepted: "day", "week", "month", or "year")
-  - `includeUnconfirmed` (required): Whether to include unconfirmed investments (boolean)
-- **Authentication:** Required (Read Only JWT token)
-- **Response:** Statistics object with counts and sums grouped by the specified period
+  - `startDate` (required): Start date of the range in ISO date format (e.g., 2023-01-01). Partial dates (e.g., 2024-07) will be completed to the full format (2024-07-01).
+  - `endDate` (required): End date of the range in ISO date format (e.g., 2023-12-31). Partial dates will be completed similarly.
+  - `granularity` (required): The period for grouping data. Accepted values are "day", "week", "month", or "year".
+- **Authentication:** Required (Valid JWT with `read` or `readWrite` permissions)
+- **Response:**
+
+  - **Status:** 200 OK
+  - **Body:**
+    `json
+{
+  "status": "success",
+  "data": {
+    "totalInvestments": <total_investments>,
+    "totalValue": <total_value>,
+     "details": {
+      "<period>": {
+        "count": <number_of_investments>,
+        "totalValue": <total_value_for_period>
+      }
+    }
+  }
+}
+`
+  - **Fields:**
+
+    - `status: Indicates the success status of the request.
+    - `data`: Contains the statistics for the specified date range:
+      - `totalInvestments`: Total number of investments within the specified date range.
+      - `totalValue`: Aggregate value of all investments within the specified date range.
+      - `details`: An object where keys are the periods (e.g., years, months, weeks) and values are objects containing:
+        - `count`: Number of investments in that period.
+        - `totalValue`:Total value of investments in that period.
 
 ---
 
@@ -456,15 +593,34 @@ npm run test
 
 ### Postman
 
+The collections are also available for direct download in the /doc/postman_v2 folder, or you can use the corresponding buttons to access them online.
+
+Before accessing any endpoint that requires read or write authentication, you need to make a request to the /token endpoint to obtain a valid single-use token.
+
+#### POSTMAN COLLECTION ON LINE (Render.com)
+
+This collection of postman points to the service deployed online on render.com. so the base URL is: https://investmentapi.onrender.com/
+
+Between the local and the online-ready versions, you could also use a URL tied to an environment variable, but for simplicity, I have prepared two dedicated collections:
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/37112030-591524f7-2678-46c1-be3e-806034a0afd0?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D37112030-591524f7-2678-46c1-be3e-806034a0afd0%26entityType%3Dcollection%26workspaceId%3D4ff310f0-17de-4e59-a39d-b71459c423ec)
+
+### POSTMAN COLLECTION FOR LOCALHOST
+
+This collection of postman points to the possible service deployed locally on port 8000 for example, so the base URL is: http://localhost:8000
+
+Between the local and the online-ready versions, you could also use a URL tied to an environment variable, but for simplicity, I have prepared two dedicated collections:
+
+[<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/37112030-38e21a9b-fe21-40f3-8273-247081bf6b9b?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D37112030-38e21a9b-fe21-40f3-8273-247081bf6b9b%26entityType%3Dcollection%26workspaceId%3D4ff310f0-17de-4e59-a39d-b71459c423ec)
+
 ### Insomnia
 
 ---
 
 ## 🛠 Project Roadmap
 
-- [x] `► INSERT-TASK-1`
+- [ ] `► Add the "OnlyConfimed" field to all the GET investment or STAT request method to filter OUT the NOT confirmed investments `
 - [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
 
 ---
 
@@ -508,13 +664,5 @@ Once your PR is reviewed and approved, it will be merged into the main branch.
 ## 📄 License
 
 This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## 👏 Acknowledgments
-
-- List any resources, contributors, inspiration, etc. here.
-
-[**Return**](#-quick-links)
 
 ---

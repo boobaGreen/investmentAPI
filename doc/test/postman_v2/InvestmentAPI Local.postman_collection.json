@@ -1,0 +1,1159 @@
+{
+	"info": {
+		"_postman_id": "38e21a9b-fe21-40f3-8273-247081bf6b9b",
+		"name": "InvestmentAPI Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "37112030",
+		"_collection_link": "https://www.postman.com/cryosat-technologist-51338560/workspace/investmentapi-public/collection/37112030-38e21a9b-fe21-40f3-8273-247081bf6b9b?action=share&source=collection_link&creator=37112030"
+	},
+	"item": [
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "healthy check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api",
+			"item": [
+				{
+					"name": "api help",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/token",
+			"item": [
+				{
+					"name": "READ AUTH OK - token-empty user and pass",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "http://localhost:8000/api/token"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": "http://localhost:8000/api/token"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "READWRITE AUTH OK - token-correct user and pass",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"password1\"\r\n}"
+						},
+						"url": "http://localhost:8000/api/token"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"password1\"\r\n}"
+								},
+								"url": "http://localhost:8000/api/token"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "token-correct user and pass - with missing pass",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"user1\"\r\n}"
+						},
+						"url": "http://localhost:8000/api/token"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user1\"\r\n}"
+								},
+								"url": "http://localhost:8000/api/token"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "token-correct user and pass - with missing user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"password1\"\r\n}"
+						},
+						"url": "http://localhost:8000/api/token"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"password\": \"password1\"\r\n}"
+								},
+								"url": "http://localhost:8000/api/token"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "token-correct user and pass - with error user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"xxxx\",\r\n  \"password\": \"password1\"\r\n}"
+						},
+						"url": "http://localhost:8000/api/token"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"xxxx\",\r\n  \"password\": \"password1\"\r\n}"
+								},
+								"url": "http://localhost:8000/api/token"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "token-correct user and pass - with error pass",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"xxxxxxx\"\r\n}"
+						},
+						"url": "http://localhost:8000/api/token"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"xxxxxxx\"\r\n}"
+								},
+								"url": "http://localhost:8000/api/token"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/api/investment",
+			"item": [
+				{
+					"name": "Get All Investments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "<<token>>",
+								"scope": ""
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "http://localhost:8000/api/investment"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "<<token>>",
+										"scope": ""
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "http://localhost:8000/api/investment"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "Get One Investments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "<<token>>",
+								"scope": ""
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "http://localhost:8000/api/investment/1"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "<<token>>",
+										"scope": ""
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "http://localhost:8000/api/investment/1"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "Delete Investment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "<<token>>",
+								"scope": ""
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": "http://localhost:8000/api/investment/1"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "<<token>>",
+										"scope": ""
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": "http://localhost:8000/api/investment/1"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "Create Investment OK",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "<<token>>",
+								"scope": ""
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"value\": 444444,\r\n  \"annualInterestRate\": 44\r\n}"
+						},
+						"url": "http://localhost:8000/api/investment"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "<<token>>",
+										"scope": ""
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"value\": 444444,\r\n  \"annualInterestRate\": 44\r\n}"
+								},
+								"url": "http://localhost:8000/api/investment"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "Update Investment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "<<token>>",
+								"scope": ""
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"value\": 3330000,\r\n  \"confirmedAt\":\"2024-07-23\"\r\n}"
+						},
+						"url": "http://localhost:8000/api/investment/2"
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "<<token>>",
+										"scope": ""
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"value\": 3330000,\r\n  \"confirmedAt\":\"2024-07-23\"\r\n}"
+								},
+								"url": "http://localhost:8000/api/investment/2"
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "/api/investment/stats",
+			"item": [
+				{
+					"name": "stats request  year all",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/investment/stats?startDate=2018-01-01&endDate=2024-12-31&granularity=year",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"investment",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2018-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2024-12-31"
+								},
+								{
+									"key": "granularity",
+									"value": "year"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/investment/stats?startDate=2018-01-01&endDate=2024-12-31&granularity=year",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"investment",
+										"stats"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2018-01-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2024-12-31"
+										},
+										{
+											"key": "granularity",
+											"value": "year"
+										}
+									]
+								}
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "stats request monthly all 2023",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/investment/stats?startDate=2023-01-01&endDate=2023-12-31&granularity=month",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"investment",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-12-31"
+								},
+								{
+									"key": "granularity",
+									"value": "month"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/investment/stats?startDate=2023-01-01&endDate=2023-12-31&granularity=month",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"investment",
+										"stats"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-12-31"
+										},
+										{
+											"key": "granularity",
+											"value": "month"
+										}
+									]
+								}
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "stats request day all 2023",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/investment/stats?startDate=2023-01-01&endDate=2023-12-31&granularity=day",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"investment",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-12-31"
+								},
+								{
+									"key": "granularity",
+									"value": "day"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/investment/stats?startDate=2023-01-01&endDate=2023-12-31&granularity=day",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"investment",
+										"stats"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-12-31"
+										},
+										{
+											"key": "granularity",
+											"value": "day"
+										}
+									]
+								}
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				},
+				{
+					"name": "stats request weekly all 2023",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/9.3.2"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/investment/stats?startDate=2023-01-01&endDate=2023-12-31&granularity=week",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"investment",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2023-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2023-12-31"
+								},
+								{
+									"key": "granularity",
+									"value": "week"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response_200",
+							"originalRequest": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "insomnia/9.3.2"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8000/api/investment/stats?startDate=2023-01-01&endDate=2023-12-31&granularity=week",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"investment",
+										"stats"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "2023-01-01"
+										},
+										{
+											"key": "endDate",
+											"value": "2023-12-31"
+										},
+										{
+											"key": "granularity",
+											"value": "week"
+										}
+									]
+								}
+							},
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "any"
+						}
+					]
+				}
+			]
+		}
+	]
+}
