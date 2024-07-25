@@ -7,7 +7,6 @@
     "seed": "node --require esbuild-register prisma/seed.ts"
   },
   "scripts": {
-    "seed": "node --require esbuild-register prisma/seed.ts",
     "test": "dotenv -e .env.test -- jest --config jest.config.ts",
     "test:detect": "dotenv -e .env.test -- jest --config jest.config.ts --detectOpenHandles",
     "dev": "nodemon src/server.ts",

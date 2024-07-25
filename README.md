@@ -5,7 +5,7 @@
     <h1 align="center">INVESTMENTAPI</h1>
 </p>
 <p align="center">
-    <em>HTTP error 401 for prompt `slogan`</em>
+    <em>Claudio Dall'Ara</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/boobaGreen/investmentAPI?style=flat&color=0080ff" alt="license">
@@ -35,7 +35,6 @@
 > - [📍 Overview](#-overview)
 > - [📦 Features](#-features)
 > - [📂 Repository Structure](#-repository-structure)
-> - [🧩 Modules](#-modules)
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running investmentAPI](#-running-investmentAPI)
@@ -49,13 +48,83 @@
 
 ## 📍 Overview
 
-HTTP error 401 for prompt `overview`
+**Exercise Specifications:**
+
+A company has decided to allow frontend-enabling bees to the public
+developers to experiment with those already made bees. Bees will allow you to create and
+read about investments and an API that allows you to see how many and which ones over time
+investments have been made. However, before carrying out some operations they must be
+authorizations via a specific API, which will assign two levels of access based on the request
+
+**Technical specifications:**
+
+1. Create an API that returns a unique, one-time use code
+   which provides access to the rest of the bees with two permission levels, one for
+   reading and one for reading and writing. If the request is made a basic
+   permission to grant that reading and writing otherwise only in
+   reading
+2. Creation of investments
+3. Reading investments
+4. Investment statistics API, which allows you to filter between two periods to see the
+   number or value of investments made in the selected period. Furthermore
+   this api will have to be used for graphs, consequently the values
+   they can be divided by day, week, month and year
+
+**Investment Specifications:** {
+data creation,
+confirmation of data,
+value,
+annual rate,
+id
+}
+
+**Delivery specifications:**
+The code must be delivered via a public repository on github, with the
+specifications to start in code.
+It is advisable to leave Postman (or similar) files in the repository for API testing
+
+**Implementation Requests:**
+
+- Backend development must be implemented with Node.js and a framework
+  choice(Express favorite)
+- The use of Typescript is mandatory
+- Data can be saved in a SQL db or in a file
+- Carry out e2e tests to verify the correct functioning of the developed APIs
+  (with bookcase of your choice)
+
+**Evaluation methods:**
+The project will be evaluated based on:
+
+- Code quality and reusability
+- Compliance with requirements
+- Following best practices
+- Correct use of git
 
 ---
 
 ## 📦 Features
 
-HTTP error 401 for prompt `features`
+### Investment Management
+
+- **Creation:** Allows the creation of new investments by specifying value and annual interest rate.
+- **Reading:** Enables viewing all investments, a single investment, or aggregate statistics over a defined period.
+- **Update:** Allows modification of an existing investment's details (value, interest rate, confirmation date).
+- **Deletion:** Enables the removal of an investment.
+
+### Authentication
+
+- **JWT Token:** Uses JWT tokens to authenticate users and secure resources. The token is unique and can be used only once.
+- **User Roles:** Supports different user roles : read, readWrite for athl level permission.
+
+### Statistics
+
+- **Data Analysis:** Provides features to analyze investment data, such as performance over time .
+- **Customization:** Allows users to customize statistics according to their needs, including selecting the relevant period and choosing the granularity between day, week, month, and year.
+
+### Other Features
+
+- **Health Check:** Monitors the server's health status.
+- **API Documentation:** Provides detailed documentation of the APIs.
 
 ---
 
@@ -81,10 +150,6 @@ HTTP error 401 for prompt `features`
     ├── package.json
     ├── prisma
     │   ├── dev.db
-    │   ├── migrations
-    │   │   ├── 20240722212222_init
-    │   │   │   └── migration.sql
-    │   │   └── migration_lock.toml
     │   ├── schema.prisma
     │   ├── seed.ts
     │   ├── seedData
@@ -140,187 +205,6 @@ HTTP error 401 for prompt `features`
 
 ---
 
-## 🧩 Modules
-
-<details closed><summary>.</summary>
-
-| File                                                                                           | Summary                                       |
-| ---------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| [tsconfig.json](https://github.com/boobaGreen/investmentAPI/blob/master/tsconfig.json)         | HTTP error 401 for prompt `tsconfig.json`     |
-| [jest.config.ts](https://github.com/boobaGreen/investmentAPI/blob/master/jest.config.ts)       | HTTP error 401 for prompt `jest.config.ts`    |
-| [package.json](https://github.com/boobaGreen/investmentAPI/blob/master/package.json)           | HTTP error 401 for prompt `package.json`      |
-| [package-lock.json](https://github.com/boobaGreen/investmentAPI/blob/master/package-lock.json) | HTTP error 401 for prompt `package-lock.json` |
-
-</details>
-
-<details closed><summary>doc.test.postman_v2</summary>
-
-| File                                                                                                                                                       | Summary                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| [InvestmentAPI.postman_collection.json](https://github.com/boobaGreen/investmentAPI/blob/master/doc/test/postman_v2/InvestmentAPI.postman_collection.json) | HTTP error 401 for prompt `doc/test/postman_v2/InvestmentAPI.postman_collection.json` |
-
-</details>
-
-<details closed><summary>doc.test.insomnia_v4</summary>
-
-| File                                                                                                                              | Summary                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [Insomnia_2024-07-22.json](https://github.com/boobaGreen/investmentAPI/blob/master/doc/test/insomnia_v4/Insomnia_2024-07-22.json) | HTTP error 401 for prompt `doc/test/insomnia_v4/Insomnia_2024-07-22.json` |
-
-</details>
-
-<details closed><summary>src</summary>
-
-| File                                                                               | Summary                                   |
-| ---------------------------------------------------------------------------------- | ----------------------------------------- |
-| [server.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/server.ts) | HTTP error 401 for prompt `src/server.ts` |
-| [app.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/app.ts)       | HTTP error 401 for prompt `src/app.ts`    |
-
-</details>
-
-<details closed><summary>src.midllewares</summary>
-
-| File                                                                                                           | Summary                                                       |
-| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| [authMiddleware.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/midllewares/authMiddleware.ts) | HTTP error 401 for prompt `src/midllewares/authMiddleware.ts` |
-
-</details>
-
-<details closed><summary>src.types</summary>
-
-| File                                                                                               | Summary                                              |
-| -------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
-| [TUser.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/types/TUser.ts)             | HTTP error 401 for prompt `src/types/TUser.ts`       |
-| [TInvestment.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/types/TInvestment.ts) | HTTP error 401 for prompt `src/types/TInvestment.ts` |
-
-</details>
-
-<details closed><summary>src.utils</summary>
-
-| File                                                                                                     | Summary                                                 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| [cookieUtils.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/cookieUtils.ts)       | HTTP error 401 for prompt `src/utils/cookieUtils.ts`    |
-| [dateUtils.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/dateUtils.ts)           | HTTP error 401 for prompt `src/utils/dateUtils.ts`      |
-| [logger.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/logger.ts)                 | HTTP error 401 for prompt `src/utils/logger.ts`         |
-| [cleanupService.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/cleanupService.ts) | HTTP error 401 for prompt `src/utils/cleanupService.ts` |
-| [catchAsync.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/catchAsync.ts)         | HTTP error 401 for prompt `src/utils/catchAsync.ts`     |
-| [dbServer.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/dbServer.ts)             | HTTP error 401 for prompt `src/utils/dbServer.ts`       |
-| [jwtConfig.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/jwtConfig.ts)           | HTTP error 401 for prompt `src/utils/jwtConfig.ts`      |
-| [appError.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/utils/appError.ts)             | HTTP error 401 for prompt `src/utils/appError.ts`       |
-
-</details>
-
-<details closed><summary>src.routes</summary>
-
-| File                                                                                                          | Summary                                                    |
-| ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| [tokenRouter.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/routes/tokenRouter.ts)           | HTTP error 401 for prompt `src/routes/tokenRouter.ts`      |
-| [helpRouter.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/routes/helpRouter.ts)             | HTTP error 401 for prompt `src/routes/helpRouter.ts`       |
-| [healthRouter.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/routes/healthRouter.ts)         | HTTP error 401 for prompt `src/routes/healthRouter.ts`     |
-| [investmentRouter.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/routes/investmentRouter.ts) | HTTP error 401 for prompt `src/routes/investmentRouter.ts` |
-
-</details>
-
-<details closed><summary>src.test</summary>
-
-| File                                                                                          | Summary                                           |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| [setupTest.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/setupTest.ts) | HTTP error 401 for prompt `src/test/setupTest.ts` |
-
-</details>
-
-<details closed><summary>src.test.tokenRouter</summary>
-
-| File                                                                                                                    | Summary                                                              |
-| ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [tokenRouter.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/tokenRouter/tokenRouter.test.ts) | HTTP error 401 for prompt `src/test/tokenRouter/tokenRouter.test.ts` |
-
-</details>
-
-<details closed><summary>src.test.investmentRouter</summary>
-
-| File                                                                                                                                     | Summary                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [updateInvestment.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/investmentRouter/updateInvestment.test.ts)   | HTTP error 401 for prompt `src/test/investmentRouter/updateInvestment.test.ts`  |
-| [statsInvestment.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/investmentRouter/statsInvestment.test.ts)     | HTTP error 401 for prompt `src/test/investmentRouter/statsInvestment.test.ts`   |
-| [createInvestment.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/investmentRouter/createInvestment.test.ts)   | HTTP error 401 for prompt `src/test/investmentRouter/createInvestment.test.ts`  |
-| [getOneInvestment.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/investmentRouter/getOneInvestment.test.ts)   | HTTP error 401 for prompt `src/test/investmentRouter/getOneInvestment.test.ts`  |
-| [deleteInvestment.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/investmentRouter/deleteInvestment.test.ts)   | HTTP error 401 for prompt `src/test/investmentRouter/deleteInvestment.test.ts`  |
-| [getallInvestments.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/investmentRouter/getallInvestments.test.ts) | HTTP error 401 for prompt `src/test/investmentRouter/getallInvestments.test.ts` |
-
-</details>
-
-<details closed><summary>src.test.utils</summary>
-
-| File                                                                                                                              | Summary                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| [deleteExpiredTokens.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/utils/deleteExpiredTokens.test.ts) | HTTP error 401 for prompt `src/test/utils/deleteExpiredTokens.test.ts` |
-
-</details>
-
-<details closed><summary>src.test.healthRouter</summary>
-
-| File                                                                                                           | Summary                                                          |
-| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| [health.test.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/test/healthRouter/health.test.ts) | HTTP error 401 for prompt `src/test/healthRouter/health.test.ts` |
-
-</details>
-
-<details closed><summary>src.service</summary>
-
-| File                                                                                                             | Summary                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [investmentService.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/service/investmentService.ts) | HTTP error 401 for prompt `src/service/investmentService.ts` |
-| [tokenService.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/service/tokenService.ts)           | HTTP error 401 for prompt `src/service/tokenService.ts`      |
-
-</details>
-
-<details closed><summary>src.controllers</summary>
-
-| File                                                                                                                       | Summary                                                             |
-| -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| [tokenController.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/controllers/tokenController.ts)           | HTTP error 401 for prompt `src/controllers/tokenController.ts`      |
-| [errorController.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/controllers/errorController.ts)           | HTTP error 401 for prompt `src/controllers/errorController.ts`      |
-| [investmentController.ts](https://github.com/boobaGreen/investmentAPI/blob/master/src/controllers/investmentController.ts) | HTTP error 401 for prompt `src/controllers/investmentController.ts` |
-
-</details>
-
-<details closed><summary>prisma</summary>
-
-| File                                                                                          | Summary                                          |
-| --------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| [tsconfig.json](https://github.com/boobaGreen/investmentAPI/blob/master/prisma/tsconfig.json) | HTTP error 401 for prompt `prisma/tsconfig.json` |
-| [seed.ts](https://github.com/boobaGreen/investmentAPI/blob/master/prisma/seed.ts)             | HTTP error 401 for prompt `prisma/seed.ts`       |
-| [schema.prisma](https://github.com/boobaGreen/investmentAPI/blob/master/prisma/schema.prisma) | HTTP error 401 for prompt `prisma/schema.prisma` |
-
-</details>
-
-<details closed><summary>prisma.seedData</summary>
-
-| File                                                                                                                   | Summary                                                           |
-| ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [investmentSeedData.ts](https://github.com/boobaGreen/investmentAPI/blob/master/prisma/seedData/investmentSeedData.ts) | HTTP error 401 for prompt `prisma/seedData/investmentSeedData.ts` |
-
-</details>
-
-<details closed><summary>prisma.migrations</summary>
-
-| File                                                                                                                 | Summary                                                           |
-| -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [migration_lock.toml](https://github.com/boobaGreen/investmentAPI/blob/master/prisma/migrations/migration_lock.toml) | HTTP error 401 for prompt `prisma/migrations/migration_lock.toml` |
-
-</details>
-
-<details closed><summary>prisma.migrations.20240722212222_init</summary>
-
-| File                                                                                                                         | Summary                                                                         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| [migration.sql](https://github.com/boobaGreen/investmentAPI/blob/master/prisma/migrations/20240722212222_init/migration.sql) | HTTP error 401 for prompt `prisma/migrations/20240722212222_init/migration.sql` |
-
-</details>
-
----
-
 ## 🚀 Getting Started
 
 **_Requirements_**
@@ -349,12 +233,35 @@ cd investmentAPI
 npm install
 ```
 
-### 🤖 Running investmentAPI
+4. Create the .env files. For the project, we plan to create 2 databases, one for 'dev' and one for 'test'. To keep the two environments separate, I have prepared scripts to facilitate their creation and initial seeding.
+   he main environment file is called .env, while the one for testing is .env.test. I have provided two example files for reference: .env.example and .env.test.example
 
-Use the following command to run investmentAPI:
+5. Now let's create the 2 databases with this commands :
 
 ```sh
-npm run build && node dist/main.js
+npm run dbdev:push
+```
+
+```sh
+npm run dbtest:push
+```
+
+6. Populate them with sample records if necessary using seed data :
+
+```sh
+npm run dbdev:seed
+```
+
+```sh
+npm run dbtest:seed
+```
+
+### 🤖 Running investmentAPI
+
+Use the following command to run investmentAPI with nodeman:
+
+```sh
+npm run dev
 ```
 
 ### 🧪 Tests
@@ -362,7 +269,7 @@ npm run build && node dist/main.js
 To execute tests, run:
 
 ```sh
-npm test
+npm run test
 ```
 
 ---
