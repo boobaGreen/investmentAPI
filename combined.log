@@ -4310,3 +4310,13 @@ Unique constraint failed on the fields: (`username`)
 2024-07-25 11:57:44 [32minfo[39m: Database seeding completed successfully
 2024-07-25 12:19:02 [32minfo[39m: App running on port 8000...
 2024-07-25 12:41:29 [32minfo[39m: App running on port 8000...
+2024-07-25 12:58:17 [32minfo[39m: App running on port 8000...
+2024-07-25 12:59:11 [33mwarn[39m: user table does not exist. Skipping.
+2024-07-25 12:59:11 [33mwarn[39m: investment table does not exist. Skipping.
+2024-07-25 12:59:11 [33mwarn[39m: token table does not exist. Skipping.
+2024-07-25 12:59:23 [32minfo[39m: user table is already empty.
+2024-07-25 12:59:23 [32minfo[39m: investment table is already empty.
+2024-07-25 12:59:23 [32minfo[39m: token table is already empty.
+2024-07-25 12:59:23 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 12:59:24 [32minfo[39m: Database seeding completed successfully
+2024-07-25 12:59:35 [32minfo[39m: App running on port 8000...
