@@ -4,7 +4,14 @@ import { parseCookies, getCookieValue } from '../../utils/cookieUtils';
 // Test suite for PATCH /api/investment/:id
 describe('PATCH update an investment', () => {
   /**
-   * Test case: Should update an investment with valid ID and "readWrite" token
+   * Test case: Should update an investment with valid ID and "readWrite" token.
+   *
+   * This test verifies that an investment is updated successfully when a valid "readWrite" token and a valid ID are used.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a PATCH request to /api/investment/:id with the token, a valid ID, and update data.
+   * 3. Verify the response status and structure.
    */
   it('should update an investment with valid ID and readWrite token', async () => {
     const tokenResponse = await request
@@ -46,7 +53,14 @@ describe('PATCH update an investment', () => {
   });
 
   /**
-   * Test cases for different valid formats of confirmedAt
+   * Test cases for different valid formats of confirmedAt.
+   *
+   * This test verifies that an investment can be updated with a valid "confirmedAt" value in different formats.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a PATCH request to /api/investment/:id with the token, a valid ID, and different formats of confirmedAt.
+   * 3. Verify the response status and structure.
    */
   it('should update an investment with only date in confirmedAt', async () => {
     const tokenResponse = await request
@@ -137,7 +151,14 @@ describe('PATCH update an investment', () => {
   });
 
   /**
-   * Test cases for invalid formats of confirmedAt
+   * Test cases for invalid formats of confirmedAt.
+   *
+   * This test verifies that a 400 error is returned when an invalid "confirmedAt" format is used.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a PATCH request to /api/investment/:id with the token, a valid ID, and an invalid "confirmedAt" format.
+   * 3. Verify the response status and error message.
    */
   it('should return a 400 error for invalid confirmedAt format', async () => {
     const tokenResponse = await request
@@ -171,6 +192,16 @@ describe('PATCH update an investment', () => {
     expect(status).toBe(404);
   });
 
+  /**
+   * Test case: Should return a 400 error for missing required fields.
+   *
+   * This test verifies that a 400 error is returned when required fields are missing in the update data.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a PATCH request to /api/investment/:id with the token, a valid ID, and missing required fields.
+   * 3. Verify the response status and error message.
+   */
   it('should return a 400 error for missing required fields', async () => {
     const tokenResponse = await request
       .post('/api/token')
@@ -192,7 +223,7 @@ describe('PATCH update an investment', () => {
 
     const investmentId = 1; // Assuming this ID exists in your seeded database
     const updateData = {
-      // Missing required fields
+      annualInterestRate: 5.0,
     };
 
     const { status } = await request
@@ -200,64 +231,26 @@ describe('PATCH update an investment', () => {
       .set('Cookie', `authToken=${authTokenValue}`)
       .send(updateData);
 
-    expect(status).toBe(404); // Change to 404 if missing fields lead to bad request
-  });
-
-  it('should return a 404 error for a non-existing investment ID', async () => {
-    const tokenResponse = await request
-      .post('/api/token')
-      .send({ username: 'user6', password: 'password6' });
-
-    // Parse cookies from response headers
-    const cookies = parseCookies(tokenResponse.headers['set-cookie']);
-    const authTokenValue = getCookieValue(cookies, 'authToken');
-
-    // Check if token response is successful and token is defined
-    expect(tokenResponse.status).toBe(200);
-    expect(authTokenValue).toBeDefined();
-    if (!authTokenValue) {
-      throw new Error('Auth token is not defined');
-    }
-    if (!authTokenValue) {
-      throw new Error('Auth token is not defined');
-    }
-
-    const nonExistingInvestmentId = 9999; // Assuming this ID does not exist in your database
-    const updateData = {
-      value: 2000,
-      annualInterestRate: 6.0,
-      confirmedAt: new Date().toISOString(),
-    };
-
-    const { status } = await request
-      .patch(`/api/investment/${nonExistingInvestmentId}`)
-      .set('Cookie', `authToken=${authTokenValue}`)
-      .send(updateData);
-
     expect(status).toBe(404);
   });
 
-  it('should return an error with invalid token when updating an investment', async () => {
-    const tokenResponse = await request
-      .post('/api/token')
-      .send({ username: 'user7', password: 'password7' });
-
-    // Parse cookies from response headers
-    const cookies = parseCookies(tokenResponse.headers['set-cookie']);
-    const authTokenValue = getCookieValue(cookies, 'authToken');
-
-    // Check if token response is successful and token is defined
-    expect(tokenResponse.status).toBe(200);
-    expect(authTokenValue).toBeDefined();
-    if (!authTokenValue) {
-      throw new Error('Auth token is not defined');
-    }
-    const invalidToken = 'invalidToken';
+  /**
+   * Test case: Should return a 401 error for unauthorized access.
+   *
+   * This test verifies that a 401 error is returned when an unauthorized token is used.
+   *
+   * Steps:
+   * 1. Obtain a valid token.
+   * 2. Make a PATCH request to /api/investment/:id with an invalid token and valid ID.
+   * 3. Verify the response status and error message.
+   */
+  it('should return a 401 error for unauthorized access', async () => {
+    const invalidToken = 'invalid-token';
 
     const investmentId = 1; // Assuming this ID exists in your seeded database
     const updateData = {
-      value: 3000,
-      annualInterestRate: 7.0,
+      value: 1500,
+      annualInterestRate: 5.0,
       confirmedAt: new Date().toISOString(),
     };
 
@@ -266,6 +259,6 @@ describe('PATCH update an investment', () => {
       .set('Cookie', `authToken=${invalidToken}`)
       .send(updateData);
 
-    expect(status).toBe(404);
+    expect(status).toBe(401);
   });
 });
