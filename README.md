@@ -43,6 +43,7 @@
 > - [🛠 Project Roadmap](#-project-roadmap)
 > - [🤝 Contributing](#-contributing)
 > - [📄 License](#-license)
+> - [📧 Contact](#-license)
 
 ---
 
@@ -669,7 +670,7 @@ Once your PR is reviewed and approved, it will be merged into the main branch.
 
 ---
 
-## 📧 Contact Me
+## 📧 Contact
 
 Any questions? Send me an e-mail here: [claudiodallaradev@gmail.com](claudiodallaradev@gmail.com)  
 You can find my Linkedin profile here: [https://www.linkedin.com/in/claudio-dall-ara-730aa0302/](https://www.linkedin.com/in/claudio-dall-ara-730aa0302/)
