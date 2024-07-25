@@ -4170,3 +4170,136 @@ Unique constraint failed on the fields: (`username`)
 2024-07-25 11:16:41 [32minfo[39m: Cleared investment table successfully.
 2024-07-25 11:16:41 [32minfo[39m: Reset auto-increment for all tables.
 2024-07-25 11:16:43 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:28:37 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:28:37 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:28:37 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:28:38 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:28:39 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:28:45 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:28:45 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:28:45 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:28:45 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:28:47 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:28:53 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:28:53 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:28:53 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:28:53 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:28:55 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:00 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:29:00 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:29:01 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:29:01 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:29:02 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:08 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:29:08 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:29:08 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:29:09 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:29:10 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:15 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:29:15 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:29:15 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:29:15 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:29:17 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:22 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:29:22 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:29:22 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:29:22 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:29:24 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:29 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:29:29 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:29:29 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:29:29 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:29:31 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:35 [32minfo[39m: token table is already empty.
+2024-07-25 11:29:35 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:29:36 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:29:36 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:29:37 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:29:37 [32minfo[39m: unexpected error
+2024-07-25 11:31:35 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:31:35 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:31:36 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:31:36 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:31:37 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:31:44 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:31:44 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:31:44 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:31:44 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:31:46 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:31:51 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:31:51 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:31:51 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:31:51 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:31:53 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:31:58 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:31:58 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:31:58 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:31:59 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:00 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:05 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:06 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:06 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:06 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:08 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:12 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:12 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:12 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:13 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:14 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:19 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:19 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:19 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:19 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:21 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:25 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:25 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:25 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:26 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:27 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:27 [32minfo[39m: unexpected error
+2024-07-25 11:32:42 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:42 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:42 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:42 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:44 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:50 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:50 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:50 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:51 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:52 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:32:57 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:32:57 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:32:57 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:32:58 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:32:59 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:33:04 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:33:04 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:33:05 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:33:05 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:33:06 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:33:11 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:33:11 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:33:11 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:33:12 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:33:13 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:33:18 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:33:18 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:33:18 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:33:18 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:33:20 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:33:24 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:33:24 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:33:24 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:33:25 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:33:26 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:33:30 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:33:31 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:33:31 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:33:31 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:33:33 [32minfo[39m: Database seeding completed successfully
+2024-07-25 11:33:33 [32minfo[39m: unexpected error
+2024-07-25 11:33:37 [32minfo[39m: Cleared user table successfully.
+2024-07-25 11:33:37 [32minfo[39m: Cleared investment table successfully.
+2024-07-25 11:33:37 [32minfo[39m: Cleared token table successfully.
+2024-07-25 11:33:38 [32minfo[39m: Reset auto-increment for all tables.
+2024-07-25 11:33:39 [32minfo[39m: Database seeding completed successfully

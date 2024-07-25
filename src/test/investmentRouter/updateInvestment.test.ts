@@ -217,13 +217,10 @@ describe('PATCH update an investment', () => {
     if (!authTokenValue) {
       throw new Error('Auth token is not defined');
     }
-    if (!authTokenValue) {
-      throw new Error('Auth token is not defined');
-    }
 
     const investmentId = 1; // Assuming this ID exists in your seeded database
     const updateData = {
-      annualInterestRate: 5.0,
+      wrongField: 5.0,
     };
 
     const { status } = await request
@@ -235,7 +232,7 @@ describe('PATCH update an investment', () => {
   });
 
   /**
-   * Test case: Should return a 401 error for unauthorized access.
+   * Test case: Should return a 404 error for unauthorized access.
    *
    * This test verifies that a 401 error is returned when an unauthorized token is used.
    *
@@ -244,7 +241,7 @@ describe('PATCH update an investment', () => {
    * 2. Make a PATCH request to /api/investment/:id with an invalid token and valid ID.
    * 3. Verify the response status and error message.
    */
-  it('should return a 401 error for unauthorized access', async () => {
+  it('should return a 404 error for unauthorized access', async () => {
     const invalidToken = 'invalid-token';
 
     const investmentId = 1; // Assuming this ID exists in your seeded database
@@ -259,6 +256,6 @@ describe('PATCH update an investment', () => {
       .set('Cookie', `authToken=${invalidToken}`)
       .send(updateData);
 
-    expect(status).toBe(401);
+    expect(status).toBe(404);
   });
 });

@@ -1,13 +1,25 @@
 import request from '../setupTest';
 import { parseCookies, getCookieValue } from '../../utils/cookieUtils';
 
+// Test suite for the Investment Stats API
 describe('Investment Stats API', () => {
+  /**
+   * Test case: Should return stats for a valid date range with "readWrite" Auth level and yearly granularity.
+   *
+   * This test verifies that the API returns the correct statistics for investments when a valid "readWrite" token
+   * is provided, and the date range is valid with yearly granularity.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a GET request to /api/investment/stats with the token, a valid date range, and yearly granularity.
+   * 3. Verify the response status and structure.
+   */
   it('should return stats for a valid date range with "readWrite" Auth level and yearly granularity', async () => {
-    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user1', password: 'password1' });
 
+    // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
@@ -45,12 +57,23 @@ describe('Investment Stats API', () => {
     });
   });
 
+  /**
+   * Test case: Should return stats for a valid date range with "readWrite" Auth level and monthly granularity.
+   *
+   * This test verifies that the API returns the correct statistics for investments when a valid "readWrite" token
+   * is provided, and the date range is valid with monthly granularity.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a GET request to /api/investment/stats with the token, a valid date range, and monthly granularity.
+   * 3. Verify the response status and structure.
+   */
   it('should return stats for a valid date range with "readWrite" Auth level and monthly granularity', async () => {
-    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user2', password: 'password2' });
 
+    // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
@@ -90,12 +113,23 @@ describe('Investment Stats API', () => {
     });
   });
 
+  /**
+   * Test case: Should return stats for a valid date range with "readWrite" Auth level and weekly granularity.
+   *
+   * This test verifies that the API returns the correct statistics for investments when a valid "readWrite" token
+   * is provided, and the date range is valid with weekly granularity.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a GET request to /api/investment/stats with the token, a valid date range, and weekly granularity.
+   * 3. Verify the response status and structure.
+   */
   it('should return stats for a valid date range with "readWrite" Auth level and weekly granularity', async () => {
-    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user3', password: 'password3' });
 
+    // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
@@ -135,12 +169,23 @@ describe('Investment Stats API', () => {
     });
   });
 
+  /**
+   * Test case: Should return error for an invalid granularity value with "readWrite" Auth level.
+   *
+   * This test verifies that the API returns an error when an invalid granularity value is provided
+   * with a valid "readWrite" token.
+   *
+   * Steps:
+   * 1. Obtain a valid "readWrite" token.
+   * 2. Make a GET request to /api/investment/stats with the token, a valid date range, and an invalid granularity value.
+   * 3. Verify the response status and error message.
+   */
   it('should return error for an invalid granularity value with "readWrite" Auth level', async () => {
-    // Request a token with valid credentials
     const tokenResponse = await request
       .post('/api/token')
       .send({ username: 'user4', password: 'password4' });
 
+    // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
@@ -161,6 +206,6 @@ describe('Investment Stats API', () => {
     // Verify the status code
     expect(statusCode).toBe(404); // Assuming the API returns a 404 error for invalid granularity
   });
-});
 
-// Additional tests for missing or incorrect dates and default granularity should be added
+  // Additional tests for missing or incorrect dates and default granularity should be added
+});
