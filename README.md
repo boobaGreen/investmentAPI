@@ -239,16 +239,19 @@ git clone https://github.com/boobaGreen/investmentAPI
 cd investmentAPI
 ```
 
-3. Install the dependencies:
+3. Important: For the project to function properly, both environment files for development and testing are required.
+   Rename the files .env.example and env.test.example to .env and .env.test, respectively, and adjust the variables contained within as needed. You can leave them as they are for an initial test.
+
+4. Install the dependencies:
 
 ```sh
 npm install
 ```
 
-4. Create the .env files. For the project, we plan to create 2 databases, one for 'dev' and one for 'test'. To keep the two environments separate, I have prepared scripts to facilitate their creation and initial seeding.
+5. Create the .env files. For the project, we plan to create 2 databases, one for 'dev' and one for 'test'. To keep the two environments separate, I have prepared scripts to facilitate their creation and initial seeding.
    he main environment file is called .env, while the one for testing is .env.test. I have provided two example files for reference: .env.example and .env.test.example
 
-5. Now let's create the 2 databases with this commands :
+6. Now let's create the 2 databases with this commands :
 
 ```sh
 npm run dbdev:push
@@ -258,7 +261,7 @@ npm run dbdev:push
 npm run dbtest:push
 ```
 
-6. Populate them with sample records if necessary using seed data :
+7. Populate them with sample records if necessary using seed data :
 
 ```sh
 npm run dbdev:seed
