@@ -35,11 +35,11 @@
 > - [📍 Overview](#-overview)
 > - [📦 Features](#-features)
 > - [🔥 API](#-features)
-> - [📂 Repository Structure](#-repository-structure)
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running investmentAPI](#-running-investmentAPI)
 >   - [🧪 Tests](#-tests)
+> - [📂 Repository Structure](#-repository-structure)
 > - [🛠 Project Roadmap](#-project-roadmap)
 > - [🤝 Contributing](#-contributing)
 > - [📄 License](#-license)
@@ -198,83 +198,6 @@ The project will be evaluated based on:
 
 ---
 
-## 📂 Repository Structure
-
-```sh
-└── investmentAPI/
-    ├── README.md
-    ├── combined.log
-    ├── doc
-    │   ├── authflow
-    │   │   └── auth-flowcahrt.pdf
-    │   ├── original_track
-    │   │   └── Esercizio_1_be.pdf
-    │   └── test
-    │       ├── insomnia_v4
-    │       │   └── Insomnia_2024-07-22.json
-    │       └── postman_v2
-    │           └── InvestmentAPI.postman_collection.json
-    ├── jest.config.ts
-    ├── note.md
-    ├── package-lock.json
-    ├── package.json
-    ├── prisma
-    │   ├── dev.db
-    │   ├── schema.prisma
-    │   ├── seed.ts
-    │   ├── seedData
-    │   │   └── investmentSeedData.ts
-    │   ├── test.db
-    │   └── tsconfig.json
-    ├── src
-    │   ├── app.ts
-    │   ├── controllers
-    │   │   ├── errorController.ts
-    │   │   ├── investmentController.ts
-    │   │   └── tokenController.ts
-    │   ├── midllewares
-    │   │   └── authMiddleware.ts
-    │   ├── routes
-    │   │   ├── healthRouter.ts
-    │   │   ├── helpRouter.ts
-    │   │   ├── investmentRouter.ts
-    │   │   └── tokenRouter.ts
-    │   ├── server.ts
-    │   ├── service
-    │   │   ├── investmentService.ts
-    │   │   └── tokenService.ts
-    │   ├── test
-    │   │   ├── healthRouter
-    │   │   │   └── health.test.ts
-    │   │   ├── investmentRouter
-    │   │   │   ├── createInvestment.test.ts
-    │   │   │   ├── deleteInvestment.test.ts
-    │   │   │   ├── getOneInvestment.test.ts
-    │   │   │   ├── getallInvestments.test.ts
-    │   │   │   ├── statsInvestment.test.ts
-    │   │   │   └── updateInvestment.test.ts
-    │   │   ├── setupTest.ts
-    │   │   ├── tokenRouter
-    │   │   │   └── tokenRouter.test.ts
-    │   │   └── utils
-    │   │       └── deleteExpiredTokens.test.ts
-    │   ├── types
-    │   │   ├── TInvestment.ts
-    │   │   └── TUser.ts
-    │   └── utils
-    │       ├── appError.ts
-    │       ├── catchAsync.ts
-    │       ├── cleanupService.ts
-    │       ├── cookieUtils.ts
-    │       ├── dateUtils.ts
-    │       ├── dbServer.ts
-    │       ├── jwtConfig.ts
-    │       └── logger.ts
-    └── tsconfig.json
-```
-
----
-
 ## 🚀 Getting Started
 
 **_Requirements_**
@@ -390,6 +313,83 @@ npm run test
 - [x] `► INSERT-TASK-1`
 - [ ] `► INSERT-TASK-2`
 - [ ] `► ...`
+
+---
+
+## 📂 Repository Structure
+
+```sh
+└── investmentAPI/
+    ├── README.md
+    ├── combined.log
+    ├── doc
+    │   ├── authflow
+    │   │   └── auth-flowcahrt.pdf
+    │   ├── original_track
+    │   │   └── Esercizio_1_be.pdf
+    │   └── test
+    │       ├── insomnia_v4
+    │       │   └── Insomnia_2024-07-22.json
+    │       └── postman_v2
+    │           └── InvestmentAPI.postman_collection.json
+    ├── jest.config.ts
+    ├── note.md
+    ├── package-lock.json
+    ├── package.json
+    ├── prisma
+    │   ├── dev.db
+    │   ├── schema.prisma
+    │   ├── seed.ts
+    │   ├── seedData
+    │   │   └── investmentSeedData.ts
+    │   ├── test.db
+    │   └── tsconfig.json
+    ├── src
+    │   ├── app.ts
+    │   ├── controllers
+    │   │   ├── errorController.ts
+    │   │   ├── investmentController.ts
+    │   │   └── tokenController.ts
+    │   ├── midllewares
+    │   │   └── authMiddleware.ts
+    │   ├── routes
+    │   │   ├── healthRouter.ts
+    │   │   ├── helpRouter.ts
+    │   │   ├── investmentRouter.ts
+    │   │   └── tokenRouter.ts
+    │   ├── server.ts
+    │   ├── service
+    │   │   ├── investmentService.ts
+    │   │   └── tokenService.ts
+    │   ├── test
+    │   │   ├── healthRouter
+    │   │   │   └── health.test.ts
+    │   │   ├── investmentRouter
+    │   │   │   ├── createInvestment.test.ts
+    │   │   │   ├── deleteInvestment.test.ts
+    │   │   │   ├── getOneInvestment.test.ts
+    │   │   │   ├── getallInvestments.test.ts
+    │   │   │   ├── statsInvestment.test.ts
+    │   │   │   └── updateInvestment.test.ts
+    │   │   ├── setupTest.ts
+    │   │   ├── tokenRouter
+    │   │   │   └── tokenRouter.test.ts
+    │   │   └── utils
+    │   │       └── deleteExpiredTokens.test.ts
+    │   ├── types
+    │   │   ├── TInvestment.ts
+    │   │   └── TUser.ts
+    │   └── utils
+    │       ├── appError.ts
+    │       ├── catchAsync.ts
+    │       ├── cleanupService.ts
+    │       ├── cookieUtils.ts
+    │       ├── dateUtils.ts
+    │       ├── dbServer.ts
+    │       ├── jwtConfig.ts
+    │       └── logger.ts
+    └── tsconfig.json
+```
 
 ---
 
