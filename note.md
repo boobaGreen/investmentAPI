@@ -1,2 +1,0 @@
--- spiegazione flusso bruciare token
--- auth grafico metto in readme?
