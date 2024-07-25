@@ -258,7 +258,7 @@ npm run dbtest:seed
 
 ### 🤖 Running investmentAPI
 
-#### Local
+#### Local Run
 
 Use the following command to run investmentAPI with nodeman:
 
@@ -266,7 +266,7 @@ Use the following command to run investmentAPI with nodeman:
 npm run dev
 ```
 
-#### Deploy
+#### Deploy - for Production
 
 Use the following command to build:
 
