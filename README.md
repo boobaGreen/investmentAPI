@@ -38,6 +38,8 @@
 > - [🚀 Getting Started](#-getting-started)
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running investmentAPI](#-running-investmentAPI)
+> - [📉 DataBase Design](#-database-design)
+> - [🔐 Authentication Flow](#-uthentication-flow)
 > - [🔥 API](#-api)
 > - [🧪 Tests](#-tests)
 > - [🛠 Project Roadmap](#-project-roadmap)
@@ -289,6 +291,14 @@ Use the following command to run:
 ```sh
 npm start
 ```
+
+---
+
+## 📉 DataBase Design
+
+---
+
+## 🔐 Authentication Flow
 
 ---
 
