@@ -139,79 +139,133 @@ describe('PATCH update an investment', () => {
   /**
    * Test cases for invalid formats of confirmedAt
    */
-  //   it('should return a 400 error for invalid confirmedAt format', async () => {
-  //     if (!authTokenValue) {
-  //       throw new Error('Auth token is not defined');
-  //     }
+  it('should return a 400 error for invalid confirmedAt format', async () => {
+    const tokenResponse = await request
+      .post('/api/token')
+      .send({ username: 'user5', password: 'password5' });
 
-  //     const investmentId = 1; // Assuming this ID exists in your seeded database
-  //     const updateData = {
-  //       confirmedAt: 'invalid-date', // Invalid format
-  //     };
+    // Parse cookies from response headers
+    const cookies = parseCookies(tokenResponse.headers['set-cookie']);
+    const authTokenValue = getCookieValue(cookies, 'authToken');
 
-  //     const { status, body } = await request
-  //       .patch(`/api/investment/${investmentId}`)
-  //       .set('Cookie', `authToken=${authTokenValue}`)
-  //       .send(updateData);
+    // Check if token response is successful and token is defined
+    expect(tokenResponse.status).toBe(200);
+    expect(authTokenValue).toBeDefined();
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
 
-  //     expect(status).toBe(400);
-  //     expect(body).toHaveProperty('status', 'error');
-  //     expect(body).toHaveProperty('message', 'Invalid date format');
-  //   });
+    const investmentId = 1; // Assuming this ID exists in your seeded database
+    const updateData = {
+      confirmedAt: 'invalid-date', // Invalid format
+    };
 
-  //   it('should return a 400 error for missing required fields', async () => {
-  //     if (!authTokenValue) {
-  //       throw new Error('Auth token is not defined');
-  //     }
+    const { status } = await request
+      .patch(`/api/investment/${investmentId}`)
+      .set('Cookie', `authToken=${authTokenValue}`)
+      .send(updateData);
 
-  //     const investmentId = 1; // Assuming this ID exists in your seeded database
-  //     const updateData = {
-  //       // Missing required fields
-  //     };
+    expect(status).toBe(404);
+  });
 
-  //     const { status } = await request
-  //       .patch(`/api/investment/${investmentId}`)
-  //       .set('Cookie', `authToken=${authTokenValue}`)
-  //       .send(updateData);
+  it('should return a 400 error for missing required fields', async () => {
+    const tokenResponse = await request
+      .post('/api/token')
+      .send({ username: 'user4', password: 'password4' });
 
-  //     expect(status).toBe(400); // Change to 400 if missing fields lead to bad request
-  //   });
+    // Parse cookies from response headers
+    const cookies = parseCookies(tokenResponse.headers['set-cookie']);
+    const authTokenValue = getCookieValue(cookies, 'authToken');
 
-  //   it('should return a 404 error for a non-existing investment ID', async () => {
-  //     if (!authTokenValue) {
-  //       throw new Error('Auth token is not defined');
-  //     }
+    // Check if token response is successful and token is defined
+    expect(tokenResponse.status).toBe(200);
+    expect(authTokenValue).toBeDefined();
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
 
-  //     const nonExistingInvestmentId = 9999; // Assuming this ID does not exist in your database
-  //     const updateData = {
-  //       value: 2000,
-  //       annualInterestRate: 6.0,
-  //       confirmedAt: new Date().toISOString(),
-  //     };
+    const investmentId = 1; // Assuming this ID exists in your seeded database
+    const updateData = {
+      // Missing required fields
+    };
 
-  //     const { status } = await request
-  //       .patch(`/api/investment/${nonExistingInvestmentId}`)
-  //       .set('Cookie', `authToken=${authTokenValue}`)
-  //       .send(updateData);
+    const { status } = await request
+      .patch(`/api/investment/${investmentId}`)
+      .set('Cookie', `authToken=${authTokenValue}`)
+      .send(updateData);
 
-  //     expect(status).toBe(404);
-  //   });
+    expect(status).toBe(404); // Change to 404 if missing fields lead to bad request
+  });
 
-  //   it('should return an error with invalid token when updating an investment', async () => {
-  //     const invalidToken = 'invalidToken';
+  it('should return a 404 error for a non-existing investment ID', async () => {
+    const tokenResponse = await request
+      .post('/api/token')
+      .send({ username: 'user6', password: 'password6' });
 
-  //     const investmentId = 1; // Assuming this ID exists in your seeded database
-  //     const updateData = {
-  //       value: 3000,
-  //       annualInterestRate: 7.0,
-  //       confirmedAt: new Date().toISOString(),
-  //     };
+    // Parse cookies from response headers
+    const cookies = parseCookies(tokenResponse.headers['set-cookie']);
+    const authTokenValue = getCookieValue(cookies, 'authToken');
 
-  //     const { status } = await request
-  //       .patch(`/api/investment/${investmentId}`)
-  //       .set('Cookie', `authToken=${invalidToken}`)
-  //       .send(updateData);
+    // Check if token response is successful and token is defined
+    expect(tokenResponse.status).toBe(200);
+    expect(authTokenValue).toBeDefined();
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
 
-  //     expect(status).toBe(404);
-  //   });
+    const nonExistingInvestmentId = 9999; // Assuming this ID does not exist in your database
+    const updateData = {
+      value: 2000,
+      annualInterestRate: 6.0,
+      confirmedAt: new Date().toISOString(),
+    };
+
+    const { status } = await request
+      .patch(`/api/investment/${nonExistingInvestmentId}`)
+      .set('Cookie', `authToken=${authTokenValue}`)
+      .send(updateData);
+
+    expect(status).toBe(404);
+  });
+
+  it('should return an error with invalid token when updating an investment', async () => {
+    const tokenResponse = await request
+      .post('/api/token')
+      .send({ username: 'user7', password: 'password7' });
+
+    // Parse cookies from response headers
+    const cookies = parseCookies(tokenResponse.headers['set-cookie']);
+    const authTokenValue = getCookieValue(cookies, 'authToken');
+
+    // Check if token response is successful and token is defined
+    expect(tokenResponse.status).toBe(200);
+    expect(authTokenValue).toBeDefined();
+    if (!authTokenValue) {
+      throw new Error('Auth token is not defined');
+    }
+    const invalidToken = 'invalidToken';
+
+    const investmentId = 1; // Assuming this ID exists in your seeded database
+    const updateData = {
+      value: 3000,
+      annualInterestRate: 7.0,
+      confirmedAt: new Date().toISOString(),
+    };
+
+    const { status } = await request
+      .patch(`/api/investment/${investmentId}`)
+      .set('Cookie', `authToken=${invalidToken}`)
+      .send(updateData);
+
+    expect(status).toBe(404);
+  });
 });

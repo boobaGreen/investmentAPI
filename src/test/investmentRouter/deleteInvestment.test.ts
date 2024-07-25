@@ -17,7 +17,7 @@ describe('DELETE an investment', () => {
     // Request to obtain auth token
     const tokenResponse = await request
       .post('/api/token')
-      .send({ username: 'user4', password: 'password4' });
+      .send({ username: 'user1', password: 'password1' });
 
     // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
@@ -26,7 +26,6 @@ describe('DELETE an investment', () => {
     // Check if token response is successful and token is defined
     expect(tokenResponse.status).toBe(200);
     expect(authTokenValue).toBeDefined();
-
     // Request to delete an investment using the obtained token
     const { status } = await request
       .delete('/api/investment/1')
@@ -48,12 +47,12 @@ describe('DELETE an investment', () => {
    * 3. Verify the response status code (404) and optionally check the error message in the body.
    */
   it('should return 404 error for non-existent investment', async () => {
-    // Request to obtain auth token (same logic as previous test)
+    // Request to obtain auth token
     const tokenResponse = await request
       .post('/api/token')
-      .send({ username: 'user4', password: 'password4' });
+      .send({ username: 'user2', password: 'password2' });
 
-    // Parse cookies and extract auth token
+    // Parse cookies from response headers
     const cookies = parseCookies(tokenResponse.headers['set-cookie']);
     const authTokenValue = getCookieValue(cookies, 'authToken');
 
