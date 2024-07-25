@@ -298,7 +298,7 @@ npm start
 
 The project includes three tables in the database: User, Token, and Investment. The details of these tables are illustrated in the image below.
 
-![Database Design](./doc/database/databaseInvestmentOnlyImg.png)
+![Database Design](./doc/database/databaseInvestmentOnlyImg.webp)
 
 ---
 
@@ -344,7 +344,7 @@ The application supports two levels of authorization:
 
 For a visual representation of the authentication flow, refer to the diagram below:
 
-![Authentication Flow](./doc/authflow/auth-flowcahrt.png)
+![Authentication Flow](./doc/authflow/auth-flowcahrt.webp)
 
 ### 🗑️ Token Cleanup
 
