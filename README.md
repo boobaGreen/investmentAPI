@@ -393,6 +393,8 @@ npm run test
 - [ ] `► INSERT-TASK-2`
 - [ ] `► ...`
 
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Here are several ways you can contribute:
