@@ -39,7 +39,7 @@
 >   - [⚙️ Installation](#️-installation)
 >   - [🤖 Running investmentAPI](#-running-investmentAPI)
 > - [📉 DataBase Design](#-database-design)
-> - [🔐 Authentication Flow](#-uthentication-flow)
+> - [🔐 Authentication Flow](#-authentication-flow)
 > - [🔥 API](#-api)
 > - [🧪 Tests](#-tests)
 > - [🛠 Project Roadmap](#-project-roadmap)
