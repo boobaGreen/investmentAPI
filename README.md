@@ -345,7 +345,8 @@ The application supports two levels of authorization:
      - The `used` field is flagged as `true`
      - Subsequent requests with the same JWT will result in an error
 
-For a visual representation of the authentication flow, refer to the diagram below:
+For a visual representation of the authentication flow, refer to the diagram below-
+
 
 ![Authentication Flow-obtain-token](./doc/authflow/obtain-token-flow.webp)
 ![Authentication Flow-using-token](./doc/authflow/using-token-flow.webp)
