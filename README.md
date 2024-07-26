@@ -347,7 +347,8 @@ The application supports two levels of authorization:
 
 For a visual representation of the authentication flow, refer to the diagram below:
 
-![Authentication Flow](./doc/authflow/auth-flowcahrt.webp)
+![Authentication Flow-obtain-token](./doc/authflow/obtain-token-flow.webp)
+![Authentication Flow-using-token](./doc/authflow/using-token-flow.webp)
 
 ### 🗑️ Token Cleanup
 
