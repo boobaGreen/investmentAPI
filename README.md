@@ -136,19 +136,19 @@ The project will be evaluated based on:
 ```sh
 └── investmentAPI/
     ├── README.md
-    ├── combined.log
     ├── doc
     │   ├── authflow
-    │   │   └── auth-flowcahrt.pdf
+    │   │   ├── obtain-token-flow.webp
+    │   │   └── using-token-flow.webp
+    │   ├── database
+    │   │   └── databaseInvestmentOnlyImg.webp
     │   ├── original_track
     │   │   └── Esercizio_1_be.pdf
     │   └── test
-    │       ├── insomnia_v4
-    │       │   └── Insomnia_2024-07-22.json
     │       └── postman_v2
-    │           └── InvestmentAPI.postman_collection.json
+    │           ├── InvestmentAPI Local.postman_collection.json
+    │           └── InvestmentAPI Online URL.postman_collection.json
     ├── jest.config.ts
-    ├── note.md
     ├── package-lock.json
     ├── package.json
     ├── prisma
@@ -346,7 +346,6 @@ The application supports two levels of authorization:
      - Subsequent requests with the same JWT will result in an error
 
 For a visual representation of the authentication flow, refer to the diagram below-
-
 
 ![Authentication Flow-obtain-token](./doc/authflow/obtain-token-flow.webp)
 ![Authentication Flow-using-token](./doc/authflow/using-token-flow.webp)
