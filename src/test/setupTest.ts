@@ -4,29 +4,29 @@ import app from '../app';
 import prisma from '../utils/dbServer';
 import logger from '../utils/logger';
 
-const request = supertest(app); // Crea un'istanza di Supertest per effettuare richieste
+const request = supertest(app); // Creates an instance of Supertest to make HTTP requests
 
 beforeAll(async () => {
   try {
-    // Esegui le migrazioni di Prisma per il database di test
+    // Run Prisma migrations for the test database
     execSync(
       'npx prisma migrate dev --name init --schema=prisma/schema.prisma --preview-feature',
-      { stdio: 'inherit' }, // Usa 'inherit' per mostrare l'output nel terminale
+      { stdio: 'inherit' }, // Use 'inherit' to output the command's result to the terminal
     );
 
-    // Popola il database con dati di esempio
+    // Seed the database with sample data
     execSync('node --require esbuild-register prisma/seed.ts', {
-      stdio: 'inherit', // Usa 'inherit' per mostrare l'output nel terminale
+      stdio: 'inherit', // Use 'inherit' to output the command's result to the terminal
     });
   } catch (error) {
     logger.error('Error during setup:', error);
-    throw error; // Lancia un errore per far fallire la suite di test se la configurazione fallisce
+    throw error; // Throw an error to fail the test suite if setup fails
   }
 });
 
 afterAll(async () => {
-  // Disconnetti Prisma dopo i test per liberare le risorse
-  await prisma.$disconnect(); // Assicurati che Prisma si disconnetta correttamente
+  // Disconnect Prisma after tests to free resources
+  await prisma.$disconnect(); // Ensure Prisma disconnects properly
 });
 
-export default request; // Esporta l'istanza di Supertest per l'uso nei test
+export default request; // Export the Supertest instance for use in tests
